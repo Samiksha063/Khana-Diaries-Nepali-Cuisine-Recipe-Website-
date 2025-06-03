@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<title>Home Page</title>
+</head>
+<body>
+    <!-- header -->
+     <header>
+            <div id="logo-content">
+            <a href="index.html#home" id="logo">
+            <h1 id="khana" style="color: #D63829;">Khana </h1>
+            <h1 id="diaries" style="color: #E6A700;"> Diaries</h1>
+            </a>
+        </div>
+
+        <nav>
+            <!-- navlinks -->
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="allRecipes.html">All Recipes</a></li>
+                <li><a href="#aboutUs.html">AboutUs</a></li>
+            </ul>
+
+            <!-- search -->
+             <input type="text" id="search" name="search" placeholder="Search Recipes">
+
+             <!-- login button -->
+              <a href="#login" class="login-btn">Login</a>
+        </nav>
+
+     </header>
+
+
+    <!-- hero-image  -->
+     <section id="home">
+        <!-- welcome users -->
+         <div id="welcome">
+            <h1>Welcome to Khana Diaries</h1>
+            <p>Discover authentic taste of Nepali Kitchen</p>
+        </div>
+
+        <div id="allRecipes-btn">
+        <a href="allRecipes" >Explore Recipes</a>
+        </div>
+     </section>
+
+
+    <!-- about -->
+     <section class="about">
+        <div class="about-image">
+        <img src="images/newari-food.jpg" alt="newari bhoj">
+        </div>
+
+        <div class="about-content">
+            <h1>Prepare Your Favorite Nepali Dish At Home</h1>
+            <p>Khana Diaries is a digital collection of traditional as well as modern Nepali recipes passed down through gerenation. Whether you are craving homemade Dal Bhat or Newari feasts, we have got you covered.</p>
+        
+            <!-- more aboutUs btn -->
+        <div class="aboutUs-btn">
+            <a href="aboutUs.html">More About Us</a>
+        </div>
+        </div>
+     </section>
+
+
+    <!-- browse-recipe  -->
+     <section id="browse-recipe">
+        <h1>Browse Recipe</h1>
+
+        <div class="categories">
+            <!-- next button -->
+             <button id="next-btn"><img src="images/left-arrow.svg" alt="next-btn"></button>
+
+            <!-- snacks card -->
+            <div class="category-card">
+                <img src="images/snacks-icon.svg" alt="snacks">
+                <div class="content">
+                <h3>Snacks</h3>
+                <p>Try mouth-watering Nepali snacks even for special occasion and festival.</p>
+                <a href="#snacks">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- main dish card -->
+             <div class="category-card">
+                <img src="images/main-dish-icon.svg" alt="snacks">
+                <div class="content">
+                <h3>Main Dish</h3>
+                <p>Explore the main dishes popular in Nepal like Dal Bhat and Dhindo.</p>
+                <a href="#main-dish">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- drinks card -->
+             <div class="category-card">
+                <img src="images/drinks-icon.svg" alt="drinks">
+                <div class="content">
+                <h3>Drinks</h3>
+                <p>Try unique drinks from all over Nepal to make yourself feel refreshing.</p>
+                <a href="#drinks">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- desserts card -->
+             <div class="category-card">
+                <img src="images/dessert-icon.svg" alt="desserts">
+                <div class="content">
+                <h3>Desserts and Sweets</h3>
+                <p>To add little sweetness to your food, try making delicious desserts and sweets. </p>
+                <a href="#drinks">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- side dishes card -->
+             <div class="category-card">
+                <img src="images/side-dish-icon.svg" alt="side-dish">
+                <div class="content">
+                <h3>Side Dish</h3>
+                <p>To add spark to your main dish, don't forget to try amazing side dishes.</p>
+                <a href="#side-dish">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- pickles card -->
+             <div class="category-card">
+                <img src="images/pickle-icon.svg" alt="pickles">
+                <div class="content">
+                <h3>Pickles</h3>
+                <p>Explore sweet, sour and tangy Nepali pickles.</p>
+                <a href="#pickles">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- previous button -->
+             <button id="prev-btn"><img src="images/right-arrow.svg" alt="prev-btn"></button>
+        </div>
+
+     </section>
+
+    <!-- share-recipe  -->
+     <section id="share-recipe">
+        <div class="share-recipe-img">
+            <img src="images/share-recipe.jpg" alt="share-recipe">
+        </div>
+
+        <div class="share-recipe-content">
+            <h1>Share Your Recipes</h1>
+            <p>We believe great food brings people together. If you have a favorite homemade recipe whether it's a family treasure or your own creation , we’d love for you to share it with the Khana Diaries community.</p>
+        
+
+            <div class="share-now-btn">
+            <a href="#share-now">Share Now</a>
+        </div>
+        </div>
+     </section>
+
+
+    <!-- popular-recipe  -->
+     <section id="popular-recipe">
+        <h1>Popular Recipes</h1>
+
+        <div class="popular-recipe-container">
+            <!-- next button -->
+             <button id="next-btn"><img src="images/left-arrow.svg" alt="next-btn"></button>
+
+            <!-- card 1 dal bhat-->
+            <div class="popular-recipe-card">
+                <img src="images/dal-bhat.jpg" alt="bhat">
+                <div class="content">
+                <h3>Dal Bhat</h3>
+                <p>Dal Bhat is one of the staple food in Nepal which is cooked daily in every household.</p>
+                <a href="#dalbhat">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- card 2 dhindo-->
+             <div class="popular-recipe-card">
+                <img src="images/dhindo.jpg" alt="dhindo">
+                <div class="content">
+                <h3>Dhindo</h3>
+                <p>Dhindo is a traditional Nepali staple made by gradually stirring millet or buckwheat flour into boiling water, creating a thick, dough-like consistency.</p>
+                <a href="#dhindo">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- card 3  momo-->
+             <div class="popular-recipe-card">
+                <img src="images/MOMO.jpg" alt="momo">
+                <div class="content">
+                <h3>MOMO</h3>
+                <p>Momo is a popular Nepali dumpling filled with meat or vegetables. Often served with tangy tomato chutney.</p>
+                <a href="#momo">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- card 4 wo-->
+             <div class="popular-recipe-card">
+                <img src="images/wo.jpg" alt="wo">
+                <div class="content">
+                <h3>Wo</h3>
+                <p>Wo is a popular dish among Newari community which is served during special ocassions like festivals and jatra. </p>
+                <a href="#wo">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- card 5 buff chhoila-->
+             <div class="popular-recipe-card">
+                <img src="images/buff-chhoila.jpg" alt="chhoila">
+                <div class="content">
+                <h3>Buff Chhoila</h3>
+                <p>Buff Chhoila is a spicy and smoky Newari dish made from grilled or fried buffalo meat, marinated in mustard oil, garlic, ginger, and traditional Nepali spices. </p>
+                <a href="#chhoila">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!--card 6 selroti-->
+             <div class="popular-recipe-card">
+                <img src="images/selroti.jpg" alt="selroti">
+                <div class="content">
+                <h3>Selroti</h3>
+                <p>Sel Roti is a traditional Nepali ring-shaped rice flour doughnut, crispy on the outside and soft inside.</p>
+                <a href="#selroti">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!--card 7 yomari-->
+             <div class="popular-recipe-card">
+                <img src="images/yomari.jpg" alt="yomari">
+                <div class="content">
+                <h3>Yomari</h3>
+                <p>Yomari is a popular Newari sweet dish prepaed from rice flour filled with chaku or khuwa, specially prepared during yomari punhi.</p>
+                <a href="#yomari">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!--card 8 alootama-->
+             <div class="popular-recipe-card">
+                <img src="images/aloo-tama.jpg" alt="tama">
+                <div class="content">
+                <h3>Aloo Tama</h3>
+                <p>Tama is a traditional Nepali dish made from fermented bamboo shoots, often cooked with black-eyed peas and potatoes. Known for its unique sour flavor.</p>
+                <a href="#tama">Explore Recipe</a> <!--category wise recipes id -->
+                </div>
+            </div>
+
+            <!-- previous button -->
+             <button id="prev-btn"><img src="images/right-arrow.svg" alt="prev-btn"></button>
+        </div>
+     </section>
+
+    <!-- footer -->
+     <footer>
+
+        <section class="footer-content">
+        <div class="about-khana">
+            <h1>Khana Diaries</h1>
+            <p>Our website ensures that you <span>will <br></span>  get the best recipe to cook  <span>for <br></span> yourself and your loved ones.</p>
+        </div>
+
+        <!-- links -->
+        <div class="quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="#allRecipes">All Recipes</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- images -->
+         <div class="footer-image">
+            <img src="images/selroti.jpg" id="sel" alt="">
+            <img src="images/dhindo.jpg" id="dhindo" alt="">
+            <img src="images/dal-bhat.jpg" id="bhat" alt="">
+            <img src="images/MOMO.jpg" id="momo" alt="">
+         </div>
+
+         </section>
+
+
+         <!-- copyright -->
+          <div class="copyright">
+            Copyright &copy; 2025 Khana Diaries. All Rights Reserved
+          </div>
+     </footer>
+    <script src="script.js"></script>
+</body>
+</html>

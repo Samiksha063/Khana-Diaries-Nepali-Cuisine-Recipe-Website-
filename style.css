@@ -1,0 +1,588 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*------------- header------------------ */
+header{
+    padding: 20px 80px;
+    border: 1.5px solid #D3D3D3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+/* logo */
+#logo-content a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+
+#logo-content h1{
+    font-size: 1.8rem;
+    font-family: 'Playfair Display';
+}
+
+/* navlinks */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    gap: 20px;
+    font-family: 'DM Sans';
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;  
+}
+
+
+nav a{
+    text-decoration: none;
+    color: #212121;
+    padding: 1rem ;
+    transition: all 0.3s ease-in;
+}
+
+nav a:hover{
+    color: #861F1F;
+    text-decoration: underline;
+}
+
+/* search */
+nav input[type="text"]{
+    border: none;
+    text-align: left;
+    background-color: #f0f0f0;
+    padding: 6px 12px 6px 30px;
+    border-radius: 60px;
+    background-image: url(images/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    font-family: 'DM Sans';
+    transition: all 0.3s ease;
+}
+
+nav input[type="text"]:focus {
+    border: 1.4px solid #861F1F;
+    outline: none;
+}
+
+nav input::placeholder{
+    font-size: 0.7rem;
+    color: #616161;
+}
+
+/* login-btn */
+nav .login-btn{
+    background-color: white;
+    border: 1px solid #212121;
+    border-radius: 30px;
+    color: #212121;
+    text-align: center;
+    width: 4rem;
+    padding: 6px;
+    transition: all 0.3s ease-in;
+}
+
+nav .login-btn:hover{
+    color: white;
+    background-color: #861F1F;
+    text-decoration: none;
+    border: none;
+}
+
+/* navbar media query */
+@media(max-width:700px){
+
+    header{
+    padding: 14px 45px;
+    justify-content: space-between;
+}
+    #logo-content h1{
+    font-size: 1.5rem;
+    text-align: center;
+    }
+
+    nav ul{
+    justify-content: space-evenly; 
+}
+
+    nav{
+    font-size: 0.7rem;
+    gap: 10px;
+}
+
+nav a{
+    padding: 0.5rem ;
+}
+
+nav input[type="text"]{
+    padding: 4px 8px 4px 28px;
+    width: 20%;
+}
+
+}
+
+/* ------------------hero-image------------------------- */
+#home{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 100%;
+    color: white;
+    padding: 40px 0 60px 80px;
+}
+
+#welcome{
+    margin-top: 10%;
+}
+
+#welcome h1{
+    font-family: 'Playfair Display';
+    font-size: 3.2rem;
+}
+
+#welcome p{
+    font-family: 'DM Sans';
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+}
+
+/* explore recipe button */
+#home  a{
+    text-decoration: none;
+    color: white;
+    font-family: 'DM Sans';
+    background-color: #388E3C;
+    border-radius: 25px;
+    padding: 16px 22px;
+    transition: all 0.3s ease-in-out;
+}
+
+#home a:hover{
+    background-color: #43A047 ;
+}
+
+#home #allRecipes-btn{
+    margin-top: 8%;
+}
+
+/* hero image media query */
+@media(max-width:700px) {
+    #hero-image{
+    height: 60vh;
+    padding: 40px 0 60px 80px;
+}
+
+    #welcome h1{
+    font-size: 1.8rem;
+}
+
+#welcome p{
+    font-size: 0.9rem;
+}
+
+#hero-image  a{
+    padding: 12px 16px;
+    font-size: small;
+}
+
+#hero-image #allRecipes-btn{
+    margin-top: 10%;
+}
+}
+
+
+/* -------------------------about on home page--------------------------- */
+.about{
+    background-color: #F9F9F7;
+    padding: 7% 12%;
+    display: flex;
+    gap: 4%;
+    color: #212121;
+}
+
+.about img{
+    border-radius: 10px;
+    object-fit: cover;
+    max-width: 400px;
+    height: 450px;
+}
+
+/* about (home page) content */
+.about-content h1{
+    font-family: 'Playfair Display';
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+.about-content p{
+    font-family: 'DM Sans';
+    margin-top: 15px;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.about-content{
+    margin-top: 30px;
+}
+
+/* about us button */
+.aboutUs-btn {
+  margin-top: 6%;
+  width: fit-content;
+}
+
+.aboutUs-btn a {
+  background-color: #861F1F;
+  color: white;
+  text-decoration: none;
+  font-family: 'DM Sans';
+  font-size: 0.8rem;
+  border-radius: 50px;
+  padding: 8px 30px 8px 20px; /* space for text + arrow */
+  display: inline-block;
+  background-image: url(images/arrow-forward.png);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: background-color 0.3s ease-in;
+  line-height: 1.5;
+}
+
+.aboutUs-btn a:hover {
+  background-color: #B03A3A;
+}
+
+/* about us (homepage) media query */
+@media(max-width: 700px){
+    .about{
+    padding: 7% 12%;
+    gap: 5%;
+}
+    .about img{
+    max-width: 220px;
+    height: 290px;
+    margin-top: 15%;
+}
+.about-content h1{
+    font-size: 1.5rem;
+}
+
+.about-content p{
+    line-height: 1.2rem;
+    text-align: justify;
+    font-size: 0.8rem;
+}
+
+.aboutUs-btn a {
+  font-size: 0.6rem;
+  padding: 5px 25px 5px 15px; /* space for text + arrow */
+  background-position: right 10px center;
+  line-height: 1.5;
+}
+}
+
+
+/* ------------------------browse recipe(homepage)-------------------------------- */
+#browse-recipe{
+    padding: 7% 12%;
+}
+#browse-recipe h1{
+    text-align: center;
+    color: #212121;
+    font-family: 'Playfair Display';
+    font-size: 2.1rem;
+    font-weight: lighter;
+}
+
+/* cards */
+.categories{
+    display: flex;
+    margin-top: 6%;
+    gap: 20px;
+}
+
+.category-card{
+    border: 1px solid #DBDFD0;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-family: 'DM Sans';
+    color: #212121;
+    width: 1000px;
+    transition: all 0.3s ease-in-out;
+}
+
+.category-card:hover{
+    transform:scale(1.04);
+    border: 1px solid #861F1F;
+
+}
+
+.categories img{
+    background-color: #F3F3F0;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.category-card p{
+    font-weight: lighter;
+    font-size: 0.8rem;
+
+}
+
+.category-card a{
+    text-decoration: none;
+    font-size: small;
+    color: #861F1F ;
+    transition: all 0.3s ease-in-out;
+    margin-top: 2rem;
+}
+
+.category-card a:hover{
+    color: #B03A3A;
+}
+
+/* next and previous buttons */
+.categories #next-btn, .categories #prev-btn{
+    border: none;
+    background-color: white;
+}
+
+#next-btn img, #prev-btn img{
+    background-color: white;
+    transition: all 0.3s ease-in;
+}
+
+
+/* share recipe (homepage) */
+#share-recipe{
+    background-color: #F9F9F7;
+    padding: 4% 12%;
+    display: flex;
+    gap: 4%;
+    color: #212121;
+}
+
+#share-recipe img{
+    border-radius: 10px;
+    object-fit: cover;
+    max-width: 400px;
+    height: 400px;
+}
+
+/* share now content */
+.share-recipe-content h1{
+    font-family: 'Playfair Display';
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+.share-recipe-content p{
+    font-family: 'DM Sans';
+    margin-top: 15px;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.share-recipe-content{
+    margin-top: 50px;
+}
+
+/* share now button */
+.share-now-btn {
+  margin-top: 6%;
+  width: fit-content;
+}
+
+.share-now-btn a {
+  background-color: #861F1F;
+  color: white;
+  text-decoration: none;
+  font-family: 'DM Sans';
+  font-size: 0.8rem;
+  border-radius: 50px;
+  padding: 8px 30px 8px 20px; /* space for text + arrow */
+  display: inline-block;
+  background-image: url(images/arrow-forward.png);
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: background-color 0.3s ease-in;
+  line-height: 1.5;
+}
+
+.share-now-btn a:hover {
+  background-color: #B03A3A;
+}
+
+
+/* -----------------------popular recipe---------------------------------- */
+#popular-recipe{
+    padding: 7% 12%;
+}
+
+#popular-recipe h1{
+    text-align: center;
+    color: #212121;
+    font-family: 'Playfair Display';
+    font-size: 2.1rem;
+    font-weight: lighter;
+}
+
+.popular-recipe-container{
+    display: flex;
+    margin-top: 6%;
+    gap: 20px;
+}
+
+.popular-recipe-card{
+    border: 1px solid #DBDFD0;
+    border-radius: 10px;
+    text-align: left;
+    font-family: 'DM Sans';
+    color: #212121;
+    transition: all 0.3s ease-in-out;
+    height: 450px;
+}
+
+.popular-recipe-card:hover{
+    transform:scale(1.03);
+    border: 1px solid #861F1F;
+
+}
+
+/* card content */
+.popular-recipe-card .content{
+    padding: 20px;
+}
+
+.popular-recipe-card img{
+    object-fit:cover;
+    border-radius: 10px 10px 0 0;
+    width: 300px;
+    height: 300px;
+}
+
+.popular-recipe-card p{
+    font-weight: lighter;
+    font-size: 0.8rem;
+
+}
+
+.popular-recipe-card a{
+    text-decoration: none;
+    font-size: small;
+    color: #861F1F ;
+    transition: all 0.3s ease-in-out;
+    margin-top: 2rem;
+}
+
+.popular-recipe-card a:hover{
+    color: #B03A3A;
+}
+
+/* next and previous buttons */
+.popular-recipe-container #next-btn, .popular-recipe-container #prev-btn{
+    border: none;
+    background-color: white;
+}
+
+#next-btn img, #prev-btn img{
+    background-color: white;
+    transition: all 0.3s ease-in;
+}
+
+
+/*-------------------------- footer-------------------------------- */
+footer{
+    background-color: #474747;
+    padding: 7% 12% 0;
+    color: white;
+    margin-top: 6%;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+}
+
+.about-khana h1{
+    font-family: 'Playfair Display';
+    font-size: 2.3rem;
+
+}
+
+.about-khana p{
+    font-family: 'DM Sans';
+    text-align: justify;
+    font-weight: lighter;
+    font-size: small;
+    line-height: 1.4rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+}
+
+/* links */
+.quick-links h4, .quick-links a{
+    font-family: 'DM Sans';
+}
+
+.quick-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.quick-links a:hover{
+    border-bottom: 1.8px solid white;
+}
+
+.quick-links li{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer-image{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* images */
+.footer-image img{
+    object-fit: cover;
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    
+}
+
+/* copyright */
+.copyright{
+    text-align: center;
+    padding: 5rem 2rem;
+}
