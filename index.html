@@ -69,79 +69,82 @@
      </section>
 
 
-    <!-- browse-recipe  -->
-     <section id="browse-recipe">
+    <!-- browse-recipe -->
+    <section id="browse-recipe">
         <h1>Browse Recipe</h1>
 
         <div class="categories">
-            <!-- next button -->
-             <button id="next-btn"><img src="images/left-arrow.svg" alt="next-btn"></button>
-
-            <!-- snacks card -->
-            <div class="category-card">
-                <img src="images/snacks-icon.svg" alt="snacks">
-                <div class="content">
-                <h3>Snacks</h3>
-                <p>Try mouth-watering Nepali snacks even for special occasion and festival.</p>
-                <a href="#snacks">Explore Recipe</a> <!--category wise recipes id -->
-                </div>
-            </div>
-
-            <!-- main dish card -->
-             <div class="category-card">
-                <img src="images/main-dish-icon.svg" alt="snacks">
-                <div class="content">
-                <h3>Main Dish</h3>
-                <p>Explore the main dishes popular in Nepal like Dal Bhat and Dhindo.</p>
-                <a href="#main-dish">Explore Recipe</a> <!--category wise recipes id -->
-                </div>
-            </div>
-
-            <!-- drinks card -->
-             <div class="category-card">
-                <img src="images/drinks-icon.svg" alt="drinks">
-                <div class="content">
-                <h3>Drinks</h3>
-                <p>Try unique drinks from all over Nepal to make yourself feel refreshing.</p>
-                <a href="#drinks">Explore Recipe</a> <!--category wise recipes id -->
-                </div>
-            </div>
-
-            <!-- desserts card -->
-             <div class="category-card">
-                <img src="images/dessert-icon.svg" alt="desserts">
-                <div class="content">
-                <h3>Desserts and Sweets</h3>
-                <p>To add little sweetness to your food, try making delicious desserts and sweets. </p>
-                <a href="#drinks">Explore Recipe</a> <!--category wise recipes id -->
-                </div>
-            </div>
-
-            <!-- side dishes card -->
-             <div class="category-card">
-                <img src="images/side-dish-icon.svg" alt="side-dish">
-                <div class="content">
-                <h3>Side Dish</h3>
-                <p>To add spark to your main dish, don't forget to try amazing side dishes.</p>
-                <a href="#side-dish">Explore Recipe</a> <!--category wise recipes id -->
-                </div>
-            </div>
-
-            <!-- pickles card -->
-             <div class="category-card">
-                <img src="images/pickle-icon.svg" alt="pickles">
-                <div class="content">
-                <h3>Pickles</h3>
-                <p>Explore sweet, sour and tangy Nepali pickles.</p>
-                <a href="#pickles">Explore Recipe</a> <!--category wise recipes id -->
-                </div>
-            </div>
-
             <!-- previous button -->
-             <button id="prev-btn"><img src="images/right-arrow.svg" alt="prev-btn"></button>
-        </div>
+            <button id="browse-prev-btn" >&#10094;</button>
+            <!-- <img src="images/left-arrow.svg" alt="prev-btn"> -->
+            
+            <div class="categories-inner">
+                <!-- snacks card -->
+                <div class="category-card">
+                    <img src="images/snacks-icon.svg" alt="snacks">
+                    <div class="content">
+                        <h3>Snacks</h3>
+                        <p>Try mouth-watering Nepali snacks for special occasion and festival.</p>
+                        <a href="#snacks">Explore Recipe</a>
+                    </div>
+                </div>
 
-     </section>
+                <!-- main dish card -->
+                <div class="category-card">
+                    <img src="images/main-dish-icon.svg" alt="main-dish">
+                    <div class="content">
+                        <h3>Main Dish</h3>
+                        <p>Explore the main dishes popular in Nepal like Dal Bhat and Dhindo.</p>
+                        <a href="#main-dish">Explore Recipe</a>
+                    </div>
+                </div>
+
+                <!-- drinks card -->
+                <div class="category-card">
+                    <img src="images/drinks-icon.svg" alt="drinks">
+                    <div class="content">
+                        <h3>Drinks</h3>
+                        <p>Try unique drinks from all over Nepal to make yourself feel refreshing.</p>
+                        <a href="#drinks">Explore Recipe</a>
+                    </div>
+                </div>
+
+                <!-- desserts card -->
+                <div class="category-card">
+                    <img src="images/dessert-icon.svg" alt="desserts">
+                    <div class="content">
+                        <h3>Desserts</h3>
+                        <p>To add little sweetness to your food, try making delicious desserts.</p>
+                        <a href="#desserts">Explore Recipe</a>
+                    </div>
+                </div>
+
+                <!-- side dishes card -->
+                <div class="category-card">
+                    <img src="images/side-dish-icon.svg" alt="side-dish">
+                    <div class="content">
+                        <h3>Side Dish</h3>
+                        <p>To add spark to your main dish, don't forget to try amazing side dishes.</p>
+                        <a href="#side-dish">Explore Recipe</a>
+                    </div>
+                </div>
+
+                <!-- pickles card -->
+                <div class="category-card">
+                    <img src="images/pickle-icon.svg" alt="pickles">
+                    <div class="content">
+                        <h3>Pickles</h3>
+                        <p>Explore sweet, sour and tangy Nepali pickles.</p>
+                        <a href="#pickles">Explore Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- next button -->
+            <button id="browse-next-btn">&#10095;</button> 
+            <!-- <img src="images/right-arrow.svg" alt="next-btn"> -->
+        </div>
+    </section>
 
     <!-- share-recipe  -->
      <section id="share-recipe">
@@ -166,15 +169,18 @@
         <h1>Popular Recipes</h1>
 
         <div class="popular-recipe-container">
-            <!-- next button -->
-             <button id="next-btn"><img src="images/left-arrow.svg" alt="next-btn"></button>
+            
+            <!-- previous button -->
+             <button id="popular-prev-btn">&#10094;</button>
+             <!-- <img src="images/left-arrow.svg" alt="prev-btn"> -->
 
-            <!-- card 1 dal bhat-->
+             <div class="popular-recipe-wrapper">
+                <!-- card 1 dal bhat-->
             <div class="popular-recipe-card">
                 <img src="images/dal-bhat.jpg" alt="bhat">
                 <div class="content">
                 <h3>Dal Bhat</h3>
-                <p>Dal Bhat is one of the staple food in Nepal which is cooked daily in every household.</p>
+                <p>Dal Bhat is one of the staple food in Nepal which is cooked daily in every household.It is steamed and served with side dishes and pickles.</p>
                 <a href="#dalbhat">Explore Recipe</a> <!--category wise recipes id -->
                 </div>
             </div>
@@ -248,9 +254,12 @@
                 <a href="#tama">Explore Recipe</a> <!--category wise recipes id -->
                 </div>
             </div>
+             </div>
+            <!-- next button -->
+             <button id="popular-next-btn">&#10095;</button>
+             <img src="images/right-arrow.svg" alt="next-btn">
 
-            <!-- previous button -->
-             <button id="prev-btn"><img src="images/right-arrow.svg" alt="prev-btn"></button>
+            
         </div>
      </section>
 

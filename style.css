@@ -317,64 +317,106 @@ nav input[type="text"]{
 /* cards */
 .categories{
     display: flex;
-    margin-top: 6%;
+    align-items: center;
     gap: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 6%;
+    max-width: 1200px;
+    padding: 0 40px; /* Add space for buttons */
 }
 
+/* Cards Container (Sliding Part) */
+.categories-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+
 .category-card{
+    min-width: calc(25% - 15px); /* Show 4 cards */
     border: 1px solid #DBDFD0;
     border-radius: 10px;
     padding: 15px;
     text-align: center;
     font-family: 'DM Sans';
     color: #212121;
-    width: 1000px;
-    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;  
 }
 
 .category-card:hover{
     transform:scale(1.04);
     border: 1px solid #861F1F;
-
 }
+
 
 .categories img{
     background-color: #F3F3F0;
     border-radius: 50px;
     padding: 20px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+     margin: 0 0 10px 0;
 }
 
 .category-card p{
-    font-weight: lighter;
     font-size: 0.8rem;
-
+    margin: 0 0 15px 0;
+    line-height: 1.5rem;
+    word-spacing: 0.1rem;
+    color: #666;
 }
 
 .category-card a{
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #861F1F;
     text-decoration: none;
-    font-size: small;
-    color: #861F1F ;
+    font-weight: bold;
+    font-size: 14px;
     transition: all 0.3s ease-in-out;
-    margin-top: 2rem;
 }
 
 .category-card a:hover{
     color: #B03A3A;
 }
 
-/* next and previous buttons */
-.categories #next-btn, .categories #prev-btn{
+.categories #browse-next-btn, .categories #browse-prev-btn{
+      background-color: white;
     border: none;
-    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 
-#next-btn img, #prev-btn img{
-    background-color: white;
-    transition: all 0.3s ease-in;
+.categories #browse-prev-btn {
+    left: 0;
+}
+
+.categories #browse-next-btn {
+    right: 0;
 }
 
 
-/* share recipe (homepage) */
+
+
+
+/* ------------------share recipe (homepage)-------------------- */
 #share-recipe{
     background-color: #F9F9F7;
     padding: 4% 12%;
@@ -438,6 +480,7 @@ nav input[type="text"]{
 /* -----------------------popular recipe---------------------------------- */
 #popular-recipe{
     padding: 7% 12%;
+    position: relative;
 }
 
 #popular-recipe h1{
@@ -449,19 +492,26 @@ nav input[type="text"]{
 }
 
 .popular-recipe-container{
+    overflow: hidden;
+    position: relative;
     display: flex;
     margin-top: 6%;
     gap: 20px;
+    max-width: 1200px;
+    padding: 0 40px;
+    width: 100%; 
+
 }
 
 .popular-recipe-card{
+    min-width: calc(33.33% - 13.33px); /* Show 3 cards */
     border: 1px solid #DBDFD0;
     border-radius: 10px;
     text-align: left;
     font-family: 'DM Sans';
     color: #212121;
-    transition: all 0.3s ease-in-out;
-    height: 450px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;  
 }
 
 .popular-recipe-card:hover{
@@ -470,30 +520,43 @@ nav input[type="text"]{
 
 }
 
+/* Cards Container (Sliding Part) */
+.popular-recipe-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    padding: 10px 0;
+    padding-right: 100px; 
+}
+
 /* card content */
 .popular-recipe-card .content{
     padding: 20px;
 }
 
 .popular-recipe-card img{
+    width: 100%;
+    height: 200px;
     object-fit:cover;
     border-radius: 10px 10px 0 0;
-    width: 300px;
-    height: 300px;
+    
 }
 
 .popular-recipe-card p{
-    font-weight: lighter;
     font-size: 0.8rem;
+    color: #666;
+    margin: 10px 0;
 
 }
 
 .popular-recipe-card a{
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #861F1F;
     text-decoration: none;
-    font-size: small;
-    color: #861F1F ;
+    font-weight: bold;
+    font-size: 14px;
     transition: all 0.3s ease-in-out;
-    margin-top: 2rem;
 }
 
 .popular-recipe-card a:hover{
@@ -501,15 +564,36 @@ nav input[type="text"]{
 }
 
 /* next and previous buttons */
-.popular-recipe-container #next-btn, .popular-recipe-container #prev-btn{
-    border: none;
+.popular-recipe-container #popular-next-btn, 
+.popular-recipe-container #popular-prev-btn {
     background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 }
 
-#next-btn img, #prev-btn img{
-    background-color: white;
-    transition: all 0.3s ease-in;
+
+.popular-recipe-container #popular-prev-btn {
+    left: 0px;
 }
+
+.popular-recipe-container #popular-next-btn {
+    right: 0px;
+}
+
+
+
 
 
 /*-------------------------- footer-------------------------------- */
