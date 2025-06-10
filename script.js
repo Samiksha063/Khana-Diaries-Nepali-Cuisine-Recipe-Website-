@@ -1,3 +1,33 @@
+
+// ------------All Recipe page category filter------------------------
+
+const buttons = document.querySelectorAll(".categories-btn .filter-btn");
+const cards = document.querySelectorAll(".allRecipeCard");
+
+
+buttons.forEach(button => {
+    button.addEventListener("click" , (e) => {// Add click event listeners to each button
+        e.preventDefault(); //prevent default link behaviour
+
+        // Toggle active state: Remove 'active' from all buttons, add to clicked one
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const category = button.getAttribute("data-category");
+
+        // Filter cards: Show/hide based on category
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute("data-category");
+            if(category === "all" || cardCategory === category){
+                card.classList.remove("hidden");// Show card
+            }else{
+                card.classList.add("hidden");// Hide card
+            }
+        });
+    });
+});
+
+
 //------------browse recipe(Home page) image slider-----------------
 const browseSlider = document.querySelector(".categories-inner");
 const browsePrevBtn = document.getElementById("browse-prev-btn");
@@ -30,7 +60,7 @@ browsePrevBtn.addEventListener("click", () => {
 browseMoveSlider();
 
 
-//-------------------------popular recipe-------------------------
+//-------------------------popular recipe(homepage)-------------------------
 const popularSlider = document.querySelector(".popular-recipe-wrapper");
 const popularCards = document.querySelectorAll(".popular-recipe-card");
 const popularNextBtn = document.getElementById("popular-next-btn");
@@ -60,6 +90,11 @@ popularNextBtn.addEventListener("click" , () =>{
 
 
 popularMoveSlider();
+
+
+
+
+
 
 
 
