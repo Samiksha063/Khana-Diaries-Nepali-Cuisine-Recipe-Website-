@@ -813,3 +813,104 @@ footer{
     transform: translateY(0);
   }
 }
+
+
+/* write some more on about us section at the top and fix the background section of each section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mission And Vision */
+.mission-vision-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.mission, .vision {
+  flex: 1;
+  max-width: 500px;
+}
+
+.mission h2, .vision h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mission p, .vision p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+/* Mission And Vision end */
+
+/* <!-- What can you expect from khana diaries --> */
+.expect-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f6; /* soft background */
+  padding: 40px;
+  border-radius: 0px;
+  gap: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.expect-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.expect-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.expect-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+/* image size and border */
+.expect-image img {
+  width: 350px; 
+  border-radius: 10px;
+  object-fit: cover;
+}
+/*  <!-- What can you expect from khana diaries -->end */
+
+
+  
+ 
+
+
+

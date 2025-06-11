@@ -27,6 +27,26 @@ buttons.forEach(button => {
     });
 });
 
+// Auto-filter when page loads based on URL
+window.addEventListener("load", () => {
+    // Check if there's a category in the URL (like ?category=snacks)
+
+    const urlParms = new URLSearchParams(window.location.search);
+    console.log(window.location.search);
+    const category = urlParms.get("category");
+    console.log(category);
+
+    if(category){
+        // Find the button for this category and click it automatically
+        const filterButton = document.querySelector(`[data-category = "${category}"]`);
+
+        if(filterButton){
+            filterButton.click();
+        }
+    }
+})
+
+
 
 //------------browse recipe(Home page) image slider-----------------
 const browseSlider = document.querySelector(".categories-inner");
