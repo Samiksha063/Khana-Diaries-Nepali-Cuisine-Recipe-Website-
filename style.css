@@ -436,7 +436,7 @@ nav input[type="text"]{
 /* ------------------share recipe (homepage)-------------------- */
 #share-recipe{
     background-color: #F9F9F7;
-    padding: 4% 12%;
+    padding: 7% 12%;
     display: flex;
     gap: 4%;
     color: #212121;
@@ -615,9 +615,9 @@ nav input[type="text"]{
 /*-------------------------- footer-------------------------------- */
 footer{
     background-color: #474747;
-    padding: 7% 12% 0;
+    padding: 7% 12% ;
     color: white;
-    margin-top: 6%;
+    margin-top: 4%;
 }
 
 .footer-content{
@@ -815,71 +815,44 @@ footer{
 }
 
 
-/* write some more on about us section at the top and fix the background section of each section */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Mission And Vision */
+/*---------------------------About us page------------------ */
 .mission-vision-container {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 40px;
+  justify-content: space-evenly;
+  padding: 7% 12%;
   gap: 50px;
   flex-wrap: wrap;
 }
 
 .mission, .vision {
   flex: 1;
-  max-width: 500px;
+  max-width: 400px;
 }
 
 .mission h2, .vision h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2.6rem;
+  font-weight: lighter;
   margin-bottom: 10px;
+  font-family: 'Playfair Display';
+    color: #212121;
+
 }
 
 .mission p, .vision p {
   font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
+  color: #212121;
+  line-height: 1.8;
+  font-family: 'DM Sans';
 }
-/* Mission And Vision end */
 
 /* <!-- What can you expect from khana diaries --> */
 .expect-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: #f9f9f6; /* soft background */
-  padding: 40px;
-  border-radius: 0px;
-  gap: 40px;
-  flex-direction: row;
+  background-color: #F9F9F7; /* soft background */
+  padding: 7% 12%;
+  gap: 5%;
   flex-wrap: wrap;
 }
 
@@ -890,23 +863,28 @@ footer{
 }
 
 .expect-text h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: lighter;
   margin-bottom: 20px;
+  font-family: 'Playfair Display';
+  color: #212121;
 }
 
 .expect-text p {
   font-size: 1rem;
-  line-height: 1.7;
-  color: #333;
+  line-height: 1.8;
+  color: #212121;
+  font-family: 'DM Sans';
+  text-align: justify;
 }
+
 /* image size and border */
 .expect-image img {
-  width: 350px; 
+  width: 420px; 
+  height: 460px;
   border-radius: 10px;
   object-fit: cover;
 }
-/*  <!-- What can you expect from khana diaries -->end */
 
 
   
