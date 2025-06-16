@@ -965,7 +965,10 @@ footer{
     font-family: 'DM Sans';
 }
 
-.prep-time h5, .cook-time h5{
+.prep-time h5, .cook-time h5 {
+    display: flex;               
+    align-items: center; /* vertically center icon + text */
+    gap: 6px;            /* space between icon and text */
     color: #474747;
     font-weight: normal;
     font-family: 'DM Sans';
@@ -980,6 +983,15 @@ footer{
     margin-left: 10px;
 }
 
+.timer-icon {
+  transition: transform 0.3s ease;
+}
+
+.timer-icon:hover {
+  transform: scale(1.5);
+}
+
+
 /* ingredients */
 .ingredients, .instructions{
     padding: 1% 24% 3% 12%;
@@ -987,10 +999,111 @@ footer{
     color: #212121;
 }
 
-.ingredients h3, .ingredients h4, .instructions h3, .instructions h4{
+.ingredients h2, .ingredients h3, .instructions h2, .instructions h3{
     font-weight: normal;
+    line-height: 2.5rem;
 }
 
-li{
-    color: #212121;
+.ingredients h2,.instructions h2{
+    display: flex;               
+    align-items: center; /* vertically center icon + text */
+    gap: 6px; 
 }
+
+.ingredients ul, .instructions ol {
+  list-style-position: inside; /* bullets move inside the padding */
+}
+
+.ingredients li, .instructions li{
+    color: #212121;
+    padding-left: 14px;
+    line-height: 1.8rem;
+}
+
+.ingredients{
+    margin-top: 15px;
+}
+
+/* tips */
+.tips{
+    padding: 20px;
+    color: #212121;
+    background-color: #fff4e6;
+    border-left: 6px solid #861F1F;
+    max-width: 700px; 
+    width: 90%; 
+    overflow-wrap: break-word;
+    margin: 25px 25% 25px 12%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-height: 400px; 
+    overflow-y: auto;
+}
+
+.tips h3{
+    font-family: 'DM Sans';
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.tips li{
+    font-family: 'DM Sans';
+}
+
+.tips img{
+    width: 24px;
+    height: 24px;
+}
+
+.tips ul{
+  list-style-position: inside; /* bullets move inside the padding */
+  margin-top: 10px;
+}
+
+.tips li{
+    color: #212121;
+    padding-left: 14px;
+    line-height: 1.8rem;
+}
+
+.happy-cooking{
+    text-align: center;
+    color: #861F1F;
+    font-family: 'Caveat';
+    font-size: 2.5rem;
+    margin-top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+.happy-cooking:hover{
+animation: shake 0.5s;
+cursor: pointer;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+/* --------------------you might like--------------- */
+#you-might-like{
+    padding:1% 24% 3% 12% ;
+    margin-top: 6%;
+    font-family: 'DM Sans';
+    
+}
+
+#you-might-like h2{
+    color: #212121;
+    font-weight: normal;
+    margin-bottom: 3%;
+    font-size: 1.8rem;
+}
+#you-might-like h2 i.fa-star {
+      color: #E6A700;
+      margin-right: 8px;
+      font-size: 1.5rem;
+      vertical-align: middle;
+    }
