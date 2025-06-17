@@ -1029,6 +1029,7 @@ footer{
     color: #212121;
     padding-left: 14px;
     line-height: 2rem;
+    text-align: justify;
 }
 
 .ingredients{
