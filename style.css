@@ -921,10 +921,21 @@ footer{
  }
 
  .recipeTitle h1{
-    font-family: 'Playfair Display';
-    font-weight: lighter;
+    font-family: 'DM Sans';
+    font-weight: normal;
+    color: #212121;
 
  }
+
+ /* date */
+ .date{
+    margin-top: 10px;
+ }
+.posted-date{
+    color: #666;
+    font-family: 'DM Sans';
+    font-size: 0.9rem;
+}
 
  .dish-image{
     padding: 3% 24% 3% 12%;
@@ -1017,7 +1028,7 @@ footer{
 .ingredients li, .instructions li{
     color: #212121;
     padding-left: 14px;
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 
 .ingredients{
@@ -1083,6 +1094,7 @@ cursor: pointer;
 
 @keyframes shake {
   0% { transform: translateX(0); }
+  25%{transform: translateX(-2px);}
   50% { transform: translateX(2px); }
   100% { transform: translateX(0); }
 }
@@ -1101,7 +1113,7 @@ cursor: pointer;
     margin-bottom: 3%;
     font-size: 1.8rem;
 }
-#you-might-like h2 i.fa-star {
+#you-might-like h2 .star-icon {
       color: #E6A700;
       margin-right: 8px;
       font-size: 1.5rem;
