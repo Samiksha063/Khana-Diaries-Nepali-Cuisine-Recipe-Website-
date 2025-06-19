@@ -30,7 +30,10 @@
             </ul>
 
             <!-- search -->
+             <div class="search-container">
              <input type="text" id="search" name="search" placeholder="Search Recipes">
+             <span id="clearSearch">&times;</span>
+             </div>
 
              <!-- login button -->
               <a href="./login.html" class="login-btn">Login</a>
@@ -54,6 +57,8 @@
    
 
    </div>
+           
+        <p id="message"></p> 
 
    <!-- -------------------all recipe cards---------- -->
  <section id="allRecipeSection">
@@ -61,7 +66,7 @@
     <div class="allRecipeContainer">
 
         <!-- card 1 dal-bhat -->
-        <div class="allRecipeCard" data-category="maindish">
+        <div id="dalbhat" class="allRecipeCard" data-category="maindish">
             <img src="../images/dal-bhat.jpg" alt="bhat">
                 <div class="content">
                 <h3>Dal Bhat</h3>
@@ -71,7 +76,7 @@
         </div>
 
         <!-- card 2 dhindo-->
-             <div class="allRecipeCard" data-category="maindish">
+             <div id="dhindo" class="allRecipeCard" data-category="maindish">
                 <img src="../images/dhindo.jpg" alt="dhindo">
                 <div class="content">
                 <h3>Dhindo</h3>
@@ -81,7 +86,7 @@
             </div>
 
             <!-- card 3  momo-->
-             <div class="allRecipeCard" data-category="maindish">
+             <div id="momo" class="allRecipeCard" data-category="maindish">
                 <img src="../images/momo1.jpg" alt="momo">
                 <div class="content">
                 <h3>MOMO</h3>
@@ -91,7 +96,7 @@
             </div>
 
             <!-- card 4 wo-->
-             <div class="allRecipeCard" data-category="snacks">
+             <div id="wo" class="allRecipeCard" data-category="snacks">
                 <img src="../images/wo.jpg" alt="wo">
                 <div class="content">
                 <h3>Wo</h3>
@@ -101,7 +106,7 @@
             </div>
 
             <!-- card 5 buff chhoila-->
-             <div class="allRecipeCard" data-category="snacks">
+             <div id="chhoila" class="allRecipeCard" data-category="snacks">
                 <img src="../images/buff-chhoila.jpg" alt="chhoila">
                 <div class="content">
                 <h3>Buff Chhoila</h3>
@@ -111,7 +116,7 @@
             </div>
 
             <!--card 6 selroti-->
-             <div class="allRecipeCard" data-category="snacks">
+             <div id="selroti" class="allRecipeCard" data-category="snacks">
                 <img src="../images/selroti.jpg" alt="selroti">
                 <div class="content">
                 <h3>Selroti</h3>
@@ -121,7 +126,7 @@
             </div>
 
             <!--card 7 yomari-->
-             <div class="allRecipeCard" data-category="snacks">
+             <div id="yomari" class="allRecipeCard" data-category="snacks">
                 <img src="../images/yomari.jpg" alt="yomari">
                 <div class="content">
                 <h3>Yomari</h3>
@@ -131,7 +136,7 @@
             </div>
 
             <!--card 8 alootama-->
-             <div class="allRecipeCard" data-category="maindish">
+             <div id="tama" class="allRecipeCard" data-category="maindish">
                 <img src="../images/aloo-tama.jpg" alt="tama">
                 <div class="content">
                 <h3>Aloo Tama</h3>
@@ -141,7 +146,7 @@
             </div>
 
             <!--card 9 milk tea-->
-             <div class="allRecipeCard" data-category="drinks">
+             <div id="milktea" class="allRecipeCard" data-category="drinks">
                 <img src="../images/milk-tea.jpg" alt="milk tea">
                 <div class="content">
                 <h3>Milk Tea(Masala Chiya)</h3>
@@ -151,7 +156,7 @@
             </div>
 
             <!--card 10 lasi-->
-             <div class="allRecipeCard" data-category="drinks">
+             <div id="lassi" class="allRecipeCard" data-category="drinks">
                 <img src="../images/lasi.jpg" alt="lassi">
                 <div class="content">
                 <h3>Lassi</h3>
@@ -161,7 +166,7 @@
             </div>
 
             <!--card 11 Bhatmas Sdheko-->
-             <div class="allRecipeCard" data-category="sidedish">
+             <div id="bhatmassadheko" class="allRecipeCard" data-category="sidedish">
                 <img src="../images/bhatmas-sadheko.jpg" alt="bhatmas sadheko">
                 <div class="content">
                 <h3>Bhatmas Sadheko</h3>
@@ -171,7 +176,7 @@
             </div>
 
             <!--card 12 Spinach(Saag)-->
-             <div class="allRecipeCard" data-category="sidedish">
+             <div id="saag" class="allRecipeCard" data-category="sidedish">
                 <img src="../images/saag.jpg" alt="saag">
                 <div class="content">
                 <h3>Spinach(Saag)</h3>
@@ -181,7 +186,7 @@
             </div>
 
             <!--card 13 Chokha-->
-             <div class="allRecipeCard" data-category="pickles">
+             <div id="chokha" class="allRecipeCard" data-category="pickles">
                 <img src="../images/chokha.jpg" alt="chokha">
                 <div class="content">
                 <h3>Potato Chokha</h3>
@@ -191,7 +196,7 @@
             </div>
 
             <!--card 14 Gundruk Saadheko-->
-             <div class="allRecipeCard" data-category="pickles">
+             <div id="gundruksaadheko" class="allRecipeCard" data-category="pickles">
                 <img src="../images/gundruk-sadheko.jpg" alt="gundruk">
                 <div class="content">
                 <h3>Gundruk Saadheko</h3>
@@ -201,7 +206,7 @@
             </div>
 
              <!--card 15 jerry-->
-             <div class="allRecipeCard" data-category="desserts">
+             <div id="jerry" class="allRecipeCard" data-category="desserts">
                 <img src="../images/jerry.jpg" alt="jerry">
                 <div class="content">
                 <h3>Jerry</h3>
@@ -211,7 +216,7 @@
             </div>
 
             <!--card 16 kheer-->
-             <div class="allRecipeCard" data-category="desserts">
+             <div id="kheer" class="allRecipeCard" data-category="desserts">
                 <img src="../images/kheer.jpg" alt="kheer">
                 <div class="content">
                 <h3>Kheer</h3>
@@ -221,7 +226,7 @@
             </div>
 
             <!--card 17 chicken curry-->
-             <div class="allRecipeCard" data-category="maindish">
+             <div id="chickencurry" class="allRecipeCard" data-category="maindish">
                 <img src="../images/chicken.jpg" alt="chicken">
                 <div class="content">
                 <h3>Chicken Curry</h3>
@@ -231,7 +236,7 @@
             </div>
 
             <!--card 18 thwon-->
-             <div class="allRecipeCard" data-category="drinks">
+             <div id="thwon" class="allRecipeCard" data-category="drinks">
                 <img src="../images/aaila.jpg" alt="thwon">
                 <div class="content">
                 <h3>Thwon</h3>
@@ -241,7 +246,7 @@
             </div>
 
             <!--card 19 chatamari-->
-             <div class="allRecipeCard" data-category="snacks">
+             <div id="chatamari" class="allRecipeCard" data-category="snacks">
                 <img src="../images/chatamari.jpg" alt="chatamari">
                 <div class="content">
                 <h3>Chatamari</h3>
@@ -251,7 +256,7 @@
             </div>
 
             <!--card 20 tomato achar-->
-             <div class="allRecipeCard" data-category="pickles">
+             <div id="tomatopickle" class="allRecipeCard" data-category="pickles">
                 <img src="../images/tomato-achar.jpg" alt="tomato pickle">
                 <div class="content">
                 <h3>Tomato Pickle</h3>
@@ -261,7 +266,7 @@
             </div>
 
             <!--card 21 piroo aloo-->
-             <div class="allRecipeCard" data-category="snacks">
+             <div id="pirooaloo" class="allRecipeCard" data-category="snacks">
                 <img src="../images/piroo-aloo.jpg" alt="piro aloo">
                 <div class="content">
                 <h3>Piro Aloo</h3>
@@ -271,7 +276,7 @@
             </div>
 
             <!--card 22 momo ko achar-->
-             <div class="allRecipeCard" data-category="pickles">
+             <div id="momokoachar" class="allRecipeCard" data-category="pickles">
                 <img src="../images/momo-achar.jpg" alt="momo ko achar">
                 <div class="content">
                 <h3>Momo ko Achar</h3>
@@ -281,7 +286,11 @@
             </div>
 
              </div>
+         
  </section>
+
+
+ 
 
  
 
