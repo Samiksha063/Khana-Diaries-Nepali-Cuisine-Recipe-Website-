@@ -10,7 +10,7 @@ const recipes= ["dalbhat", "dhindo", "momo" ,"wo", "chhoila", "selroti", "yomari
 search.addEventListener("keypress", (event) => {
     if(event.key === "Enter"){
         const query = event.target.value.toLowerCase().replace(/\s+/g, ''); //replace(/\s+/g, '')=> (regular expression) removes white space globally
-        window.location.href = `../pages/allRecipes.html?recipe=${encodeURIComponent(query)}`;
+        window.location.href = `allRecipes.html?recipe=${encodeURIComponent(query)}`;
     }
 });
 
