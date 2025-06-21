@@ -1,5 +1,4 @@
 // -------------------search recipe feature--------------------
-window.addEventListener("DOMContentLoaded", () => {
 
 const search = document.getElementById("search");
 const message = document.getElementById("message");
@@ -10,15 +9,8 @@ const recipes= ["dalbhat", "dhindo", "momo" ,"wo", "chhoila", "selroti", "yomari
 
 search.addEventListener("keypress", (event) => {
     if(event.key === "Enter"){
-        const query = event.target.value.toLowerCase().replace(/\s+/g, ''); //replace(/\s+/g, '')=> regular expression removes white space globally
-
-        if(recipes.includes(query)){
-            message.textContent = "";
-            window.location.href = `../pages/allRecipes.html?recipe=${encodeURIComponent(query)}`;
-        }else{
-            message.textContent = "Recipe not found";
-        }
-
+        const query = event.target.value.toLowerCase().replace(/\s+/g, ''); //replace(/\s+/g, '')=> (regular expression) removes white space globally
+        window.location.href = `../pages/allRecipes.html?recipe=${encodeURIComponent(query)}`;
     }
 });
 
@@ -48,20 +40,24 @@ if(recipe){
             recipeCard.style.display = "none";
         });
 
-        
-            message.textContent = "Recipe not found";
+            message.innerHTML = 
+            `<p style = " margin-top: 10% ;">Recipe not found! </p>
+            <button id = "goBackBtn">&#8592; Go back </button>`
+
+            // go back to all recipe button
+document.getElementById("goBackBtn").addEventListener("click", () => {
+    //shows all recipe card again
+    document.querySelectorAll(".allRecipeCard").forEach(recipeCard => {
+            recipeCard.style.display = "block";
+        });
+
+    message.textContent = "";//clears the recipe not found message
+    search.value = "";
+});
+
         
     }
 }
-
-
-});
-//write the message "recipe not found when invalid recipe is written from any pages"
-
-
-
-
-
 
 
 
