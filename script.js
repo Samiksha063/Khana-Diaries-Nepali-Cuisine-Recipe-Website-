@@ -11,10 +11,10 @@ search.addEventListener("keypress", (event) => {
     if(event.key === "Enter"){
         const query = event.target.value.toLowerCase().replace(/\s+/g, ''); //replace(/\s+/g, '')=> (regular expression) removes white space globally
         
-        const basePath = window.location.hostname === "samiksha063.github.io"
-    ? "/Khana-Diaries-Nepali-Cuisine-Recipe-Website-/pages/allRecipes.html"
-    : "pages/allRecipes.html";
-        window.location.href = `${basePath}?recipe=${encodeURIComponent(query)}`;
+    //     const basePath = window.location.hostname === "samiksha063.github.io"
+    // ? "/Khana-Diaries-Nepali-Cuisine-Recipe-Website-/pages/allRecipes.html"
+    // : "pages/allRecipes.html";
+        window.location.href = `../pages/allRecipes.html?recipe=${encodeURIComponent(query)}`;
     }
 });
 
