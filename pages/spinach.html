@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khana Diaries - Saag</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- header -->
+     <header>
+            <div id="logo-content">
+            <a href="../index.html#home" id="logo">
+            <img src="../images/logo.png" alt="khana diaries logo">
+            <h1 id="khana" style="color: #D63829;">Khana </h1>
+            <h1 id="diaries" style="color: #E6A700;"> Diaries</h1>
+            </a>
+        </div>
+
+        <nav>
+            <!-- navlinks -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./allRecipes.html" class="active">All Recipes</a></li>
+                <li><a href="./share-now.html">Share Recipes</a></li>
+                <li><a href="./about.html">AboutUs</a></li>
+            </ul>
+
+            <!-- search -->
+             <div class="search-container">
+             <input type="text" id="search" name="search" placeholder="Search Recipes">
+             <span id="clearSearch">&times;</span>
+             </div>
+
+             <!-- login button -->
+              <a href="./login.html" class="login-btn">Login</a>
+        </nav>
+
+     </header>
+
+     
+     <!-- links -->
+     <section id="recipe-nav-links">
+        <div class="links">
+            <ul>
+                <li><a href="./allRecipes.html">All Recipes</a></li> &raquo;
+                <li><a href="./allRecipes.html?category=sidedish" class="filter-btn" data-category="sidedish">Side Dish</a></li> &raquo;
+                <li><a href="./spinach.html">Saag</a></li>
+            </ul>
+        </div>
+     </section>
+
+<!-- title -->
+<div class="recipeTitle">
+    <h1>Saag(Spinach)</h1>
+    <div class="date">
+    <time datetime="2025-06-24" class="posted-date">June 24, 2025</time>
+ </div>
+</div>
+
+<!-- momo image -->
+ <div class="dish-image">
+    <img src="../images/saag.jpg" alt="chatamari">
+ </div>
+
+ <!-- description -->
+ <div class="description">
+    <p>Spinach (Saag) is a nutritious green leafy vegetable widely used in Nepali cuisine. Often stir-fried with garlic, green chilies, and a hint of mustard oil, it's served as a healthy side dish with rice or dal.</p>
+    <div class="line"></div> 
+</div>
+
+ 
+ 
+
+ <!-- prep and cook time -->
+  <div class="timing">
+    <div class="prep-time">
+        <h5><img src="../images/timer.svg" alt="Timer icon" class="timer-icon">Prep Time</h5>
+        <p>5 - 7 mins</p>
+    </div>
+
+    <div class="small-line"></div>
+
+    <div class="border"></div>
+    <div class="cook-time">
+        <h5><img src="../images/cook.svg" alt="Cook icon" class="timer-icon">Cook Time</h5>
+        <p>5 - 10 mins</p>
+    </div>
+  </div>
+
+  <div class="recipe-container">
+  <!-- ingredients -->
+   <div class="ingredients">
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <ul>
+        <li>Fresh spinach (washed and chopped)</li>
+        <li>2 tablespoons mustard oil (for authentic flavor)</li>
+        <li>1/2 teaspoon fenugreek seeds (methi)</li>
+        <li>2-3 green chilies (whole or sliced, to taste)</li>
+        <li>Salt to taste</li>
+    </ul>
+   </div> 
+
+    <!-- instructions -->
+   <div class="instructions">
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h3>Heat oil and temper spices</h3>
+    <ol>
+        <li>Heat mustard oil in a pan until lightly smoking.</li>
+        <li>Add fenugreek seeds and let them turn dark brown.</li>
+        <li>Add garlic and green chilies. Stir until garlic is golden.</li>
+    </ol>
+
+    <h3>Add saag</h3>
+    <ol start="4">
+        <li>Add spinach and stir well.</li>
+        <li>Cook on medium-high heat for 2-4 minutes until wilted but still bright green.</li>
+    </ol>
+    
+    <h3>Season and Serve</h3>
+    <ol start="6">
+        <li>Add salt to taste.</li>
+        <li>Serve hot with dal-bhat or roti.</li>
+    </ol> 
+
+   </div>
+   </div>
+
+   <!-- tips -->
+   <div class="tips">
+    <h3><img src="../images/light-bulb.png" alt="tips" class="tips-icon">Pro Tips</h3>
+    <ul>
+    <li>Don't overcook. Keep saag fresh and green.</li>
+    <li>A pinch of turmeric or timur can be added for variety.</li>
+  </ul>
+   </div>
+
+   <div class="happy-cooking">Happy Cooking!</div>
+
+   <section id="you-might-like">
+    <h2><img src="../images/star-icon.svg" class="star-icon" alt="star-icon">You might like</h2>
+    <div class="allRecipeContainer">
+
+         <div id="chhoila" class="allRecipeCard" data-category="snacks">
+                <img src="../images/buff-chhoila.jpg" alt="chhoila">
+                <div class="content">
+                <h3>Buff Chhoila</h3>
+                <p>Buff Chhoila is a spicy and smoky Newari dish made from grilled or fried buffalo meat, marinated in mustard oil, garlic, ginger, and traditional Nepali spices. </p>
+                <a href="./chhoila.html">Explore Recipe</a> 
+                </div>
+            </div>
+
+             <div id="bhatmassadheko" class="allRecipeCard" data-category="sidedish">
+                <img src="../images/bhatmas-sadheko.jpg" alt="bhatmas sadheko">
+                <div class="content">
+                <h3>Bhatmas Sadheko</h3>
+                <p>Bhatmas Sadheko is a popular Nepali snack made by mixing roasted soybeans with chopped onions, tomatoes, green chilies, garlic, coriander, and a blend of tangy spices.</p>
+                <a href="./bhatmasSadheko.html">Explore Recipe</a> 
+                </div>
+            </div>
+
+            <div id="dalbhat" class="allRecipeCard" data-category="maindish">
+            <img src="../images/dal-bhat.jpg" alt="bhat">
+                <div class="content">
+                <h3>Dal Bhat</h3>
+                <p>Dal Bhat is one of the staple food in Nepal which is cooked daily in every household.It is steamed and served with side dishes and pickles.</p>
+                <a href="./dalbhat.html">Explore Recipe</a> 
+                </div>
+        </div>
+</div>
+   </section>
+
+
+   <!-- footer -->
+     <footer>
+
+        <section class="footer-content">
+        <div class="about-khana">
+            <h1>Khana Diaries</h1>
+            <p>Our website ensures that you <span>will <br></span>  get the best recipe to cook  <span>for <br></span> yourself and your loved ones.</p>
+        </div>
+
+        <!-- links -->
+        <div class="quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="allRecipes.html#allRecipes">All Recipes</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- images -->
+         <div class="footer-image">
+            <img src="../images/selroti.jpg" id="sel" alt="">
+            <img src="../images/dhindo.jpg" id="dhindo" alt="">
+            <img src="../images/dal-bhat.jpg" id="bhat" alt="">
+            <img src="../images/MOMO.jpg" id="momo" alt="">
+         </div>
+
+         </section>
+
+
+         <!-- copyright -->
+          <div class="copyright">
+            Copyright &copy; 2025 Khana Diaries. All Rights Reserved
+          </div>
+     </footer>
+ 
+    <script src="../script.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
