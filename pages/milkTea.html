@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khana Diaries - Milk tea</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- header -->
+     <header>
+            <div id="logo-content">
+            <a href="../index.html#home" id="logo">
+            <img src="../images/logo.png" alt="khana diaries logo">
+            <h1 id="khana" style="color: #D63829;">Khana </h1>
+            <h1 id="diaries" style="color: #E6A700;"> Diaries</h1>
+            </a>
+        </div>
+
+        <nav>
+            <!-- navlinks -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./allRecipes.html" class="active">All Recipes</a></li>
+                <li><a href="./share-now.html">Share Recipes</a></li>
+                <li><a href="./about.html">AboutUs</a></li>
+            </ul>
+
+            <!-- search -->
+             <div class="search-container">
+             <input type="text" id="search" name="search" placeholder="Search Recipes">
+             <span id="clearSearch">&times;</span>
+             </div>
+
+             <!-- login button -->
+              <a href="./login.html" class="login-btn">Login</a>
+        </nav>
+
+     </header>
+
+     
+     <!-- links -->
+     <section id="recipe-nav-links">
+        <div class="links">
+            <ul>
+                <li><a href="./allRecipes.html">All Recipes</a></li> &raquo;
+                <li><a href="./allRecipes.html?category=drinks" class="filter-btn" data-category="drinks">Drinks</a></li> &raquo;
+                <li><a href="./milkTea.html">Milk Tea</a></li>
+            </ul>
+        </div>
+     </section>
+
+<!-- title -->
+<div class="recipeTitle">
+    <h1>Milk Tea(Masala Tea)</h1>
+    <div class="date">
+    <time datetime="2025-06-25" class="posted-date">June 25, 2025</time>
+ </div>
+</div>
+
+<!-- momo image -->
+ <div class="dish-image">
+    <img src="../images/milk-tea.jpg" alt="milk tea">
+ </div>
+
+ <!-- description -->
+ <div class="description">
+    <p>Milk tea is a warm and comforting drink of every Nepali household made with special bayleaf with the blend of spices, each family having their own version. Masala chiya is more than just a drink in Nepal, it's a daily habit and social tradition. Whether at home, office, or roadside stalls, a warm cup of spiced milk tea brings people together, sparks conversations, and comforts the soul.</p>
+    <div class="line"></div> 
+</div>
+
+ 
+ 
+
+ <!-- prep and cook time -->
+  <div class="timing">
+    <div class="prep-time">
+        <h5><img src="../images/timer.svg" alt="Timer icon" class="timer-icon">Prep Time</h5>
+        <p>5 mins</p>
+    </div>
+
+    <div class="small-line"></div>
+
+    <div class="border"></div>
+    <div class="cook-time">
+        <h5><img src="../images/cook.svg" alt="Cook icon" class="timer-icon">Cook Time</h5>
+        <p>5  - 7 mins</p>
+    </div>
+  </div>
+
+  <div class="recipe-container">
+  <!-- ingredients -->
+   <div class="ingredients">
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <ul>
+        <li>1 cup water</li>
+        <li>1 cup milk (or adjust as preferred)</li>
+        <li>2 teaspoons black tea leaves</li>
+        <li>2-3 green cardamom (crushed)</li>
+        <li>2-3 cloves (optional)</li>
+        <li>Small piece of cinnamon stick (optional)</li>
+        <li>1-inch piece fresh ginger (crushed)</li>
+        <li>Sugar to taste (usually 1-2 teaspoons per cup)</li>
+    </ul>
+   </div> 
+
+    <!-- instructions -->
+   <div class="instructions">
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <ol>
+        <li>In a saucepan, add water, cardamom, ginger, and other spices.</li>
+        <li>Boil for 2-3 minutes to let the flavors release.</li>
+        <li>Add the black tea leaves to the spiced water.</li>
+        <li>Pour in milk and add sugar to taste.</li>
+        <li>Let the mixture simmer gently for another 2-3 minutes (or longer if you want stronger tea).</li>
+        <li>Strain into cups and serve hot!</li>
+    </ol> 
+
+   </div>
+   </div>
+
+   <!-- tips -->
+   <div class="tips">
+    <h3><img src="../images/light-bulb.png" alt="tips" class="tips-icon">Pro Tips</h3>
+    <ul>
+    <li>Crush the spices freshly for stronger aroma.</li>
+    <li>Adjust spice level to your preference. You can skip cloves/cinnamon for lighter tea.</li>
+  </ul>
+   </div>
+
+   <div class="happy-cooking">Happy Cooking!</div>
+
+   <section id="you-might-like">
+    <h2><img src="../images/star-icon.svg" class="star-icon" alt="star-icon">You might like</h2>
+    <div class="allRecipeContainer">
+
+         <div id="selroti" class="allRecipeCard" data-category="snacks">
+                <img src="../images/selroti.jpg" alt="selroti">
+                <div class="content">
+                <h3>Selroti</h3>
+                <p>Sel Roti is a traditional Nepali ring-shaped rice flour doughnut, crispy on the outside and soft inside.</p>
+                <a href="./selroti.html">Explore Recipe</a> 
+                </div>
+            </div>
+
+            <!--card 10 lasi-->
+             <div id="lassi" class="allRecipeCard" data-category="drinks">
+                <img src="../images/lasi.jpg" alt="lassi">
+                <div class="content">
+                <h3>Lassi</h3>
+                <p>Lassi is a popular refreshing and cooling made by blending yogurt, banana, water, fruits and some spices. It is perfect beverage for summer.</p>
+                <a href="./lassi.html">Explore Recipe</a> 
+                </div>
+            </div>
+
+            <!--card 19 chatamari-->
+             <div id="chatamari" class="allRecipeCard" data-category="snacks">
+                <img src="../images/chatamari.jpg" alt="chatamari">
+                <div class="content">
+                <h3>Chatamari</h3>
+                <p>Chatamari is a thin rice flour crepe that is a popular traditional dish of the Newar community in Nepal. Often called the "Newari pizza".</p>
+                <a href="./chatamari.html">Explore Recipe</a> 
+                </div>
+            </div>
+</div>
+   </section>
+
+
+   <!-- footer -->
+     <footer>
+
+        <section class="footer-content">
+        <div class="about-khana">
+            <h1>Khana Diaries</h1>
+            <p>Our website ensures that you <span>will <br></span>  get the best recipe to cook  <span>for <br></span> yourself and your loved ones.</p>
+        </div>
+
+        <!-- links -->
+        <div class="quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="allRecipes.html#allRecipes">All Recipes</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- images -->
+         <div class="footer-image">
+            <img src="../images/selroti.jpg" id="sel" alt="">
+            <img src="../images/dhindo.jpg" id="dhindo" alt="">
+            <img src="../images/dal-bhat.jpg" id="bhat" alt="">
+            <img src="../images/MOMO.jpg" id="momo" alt="">
+         </div>
+
+         </section>
+
+
+         <!-- copyright -->
+          <div class="copyright">
+            Copyright &copy; 2025 Khana Diaries. All Rights Reserved
+          </div>
+     </footer>
+ 
+    <script src="../script.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
