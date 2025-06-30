@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khana Diaries - Login</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+     <header>
+            <div id="logo-content">
+            <a href="../index.html#home" id="logo">
+            <img src="../images/logo.png" alt="khana diaries logo">
+            <h1 id="khana" style="color: #D63829;">Khana </h1>
+            <h1 id="diaries" style="color: #E6A700;"> Diaries</h1>
+            </a>
+        </div>
+
+        <nav>
+            <!-- navlinks -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./allRecipes.html">All Recipes</a></li>
+                <li><a href="./share-now.html">Share Recipes</a></li>
+                <li><a href="./about.html">AboutUs</a></li>
+            </ul>
+
+            <!-- search -->
+             <div class="search-container">
+             <input type="text" id="search" name="search" placeholder="Search Recipes">
+             <span id="clearSearch">&times;</span>
+             </div>
+
+             <!-- login button -->
+              <a href="./login.html#login" class="login-btn login-active">Login</a>
+              <button id="logoutBtn" style="display:none;">Logout</button>
+        </nav>
+
+     </header>
+
+     <!-- login container -->
+      <section id="login-page">
+        <div class="login-container">
+        <div class="login-image">
+            <img src="../images/login-page-image.jpg" alt="dal bhat">
+        </div>
+
+        <div class="main-login-content" >
+           
+            <form id="login-form">
+                 <h3>Login</h3>
+                <label for="email">Email</label>
+                <input type="email" id="login-email" name="email" placeholder="example123@gmail.com">
+                <p id="login-email-error" class="error"></p>
+
+                <label for="password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Enter password">
+                <p id="login-password-error" class="error"></p>
+
+                <button type="submit" id="loginBtn">Login</button>
+
+                <p id="login-message"></p>
+            </form>
+
+            <!-- register -->
+            
+            <form  id="register-form">
+                <h3>Register</h3>
+                <label for="fullname" >Full Name</label>
+                <input type="text" id="reg-fullname" name="fullname" placeholder="Enter full name">
+                <p id="reg-full-name-error" class="error"></p>
+
+                <label for="phone">Phone number</label>
+                <input type="number" id="reg-phonenumber" name="phonenumber" placeholder="+9779812345678">
+                <p id="reg-phone-error" class="error"></p>
+
+                <label for="email">Email</label>
+                <input type="email" id="reg-email" name="reg-email" placeholder="example123@gmail.com">
+                <p id="reg-email-error" class="error"></p>
+
+                <label for="password">Password</label>
+                <input type="password" id="reg-password" name="reg-password" placeholder="Enter password">
+                <p id="reg-password-error" class="error"></p>
+
+                <label for="password">Confirm Password</label>
+                <input type="password" id="reg-confirm-password" name="confirm-password" placeholder="Confirm your password">
+                <p id="reg-confirm-password-error" class="error"></p>
+
+                <button type="submit" id="registerBtn">Register</button>
+                <p id="reg-message"></p>
+            </form>
+
+            <div class="no-account">
+                <p>Don't have an account? <span class="register">Register Here</span></p>
+            </div>
+        </div>
+        </div>
+      </section>
+
+     
+     <!-- footer -->
+     <footer>
+
+        <section class="footer-content">
+        <div class="about-khana">
+            <h1>Khana Diaries</h1>
+            <p>Our website ensures that you <span>will <br></span>  get the best recipe to cook  <span>for <br></span> yourself and your loved ones.</p>
+        </div>
+
+        <!-- links -->
+        <div class="quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./allRecipes.html">All Recipes</a></li>
+                <li><a href="./share-now.html">Share Recipes</a></li>
+                <li><a href="about.html#about">About Us</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- images -->
+         <div class="footer-image">
+            <img src="../images/selroti.jpg" id="sel" alt="">
+            <img src="../images/dhindo.jpg" id="dhindo" alt="">
+            <img src="../images/dal-bhat.jpg" id="bhat" alt="">
+            <img src="../images/MOMO.jpg" id="momo" alt="">
+         </div>
+
+         </section>
+
+
+         <!-- copyright -->
+          <div class="copyright">
+            Copyright &copy; 2025 Khana Diaries. All Rights Reserved
+          </div>
+     </footer>
+
+    <script src="../script/search.js"></script>
+    <script src="../script/login.js"></script>
+</body>
+</html>
