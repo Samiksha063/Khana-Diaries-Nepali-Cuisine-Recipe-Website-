@@ -159,6 +159,24 @@ nav .login-btn:hover{
     border: none;
 }
 
+#logoutBtn{
+    background-color: white;
+    border: 1px solid #212121;
+    border-radius: 30px;
+    color: #212121;
+    text-align: center;
+    width: 4rem;
+    padding: 6px;
+    transition: all 0.3s ease-in;
+}
+
+#logoutBtn:hover{
+    color: white;
+    background-color: #861F1F;
+    text-decoration: none;
+    border: none;
+}
+
 /* navbar media query */
 @media(max-width:700px){
 
@@ -1180,8 +1198,8 @@ cursor: pointer;
     }
 
     .login-image{
-    width: 50%; /* or whatever you had originally */
-  max-width: 400px; /* optional */
+    width: 50%; 
+  max-width: 400px; 
   display: flex;
   flex-direction: column;
     }

@@ -1,10 +1,13 @@
 //switch between login and register
+document.addEventListener("DOMContentLoaded", () => {
+    
 const loginForm = document.getElementById("login-form");
 const registerForm = document.getElementById("register-form");
 const switchText = document.querySelector(".no-account");
 const logoutBtn = document.getElementById("logoutBtn");
 const loginBtn = document.querySelector(".login-btn");
-
+console.log("loginForm:", loginForm);
+if(loginForm){
 switchText.addEventListener("click", (e) => {
     if(e.target.classList.contains("register")){
         const isLoginVisible = loginForm.style.display !== "none";
@@ -107,7 +110,7 @@ logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("loggedInUser");
 
   // Show login form again
-  loginForm.style.display = "block";
+  loginBtn.style.display = "block";
   logoutBtn.style.display = "none";
   const confirmMessage = document.getElementById("login-message");
   confirmMessage.textContent = "";
@@ -230,10 +233,5 @@ logoutBtn.addEventListener("click", () => {
 
     });
 
-    //if already logged in 
-    window.addEventListener("load", () => {
-  const loggedInUserJSON = localStorage.getItem("loggedInUser");
-  if (loggedInUserJSON) {
-    window.location.href = "../index.html"; // or your dashboard page
-  }
+}
 });
