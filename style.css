@@ -1323,6 +1323,141 @@ cursor: pointer;
     border: none;
 }
 
+/* -----------------share recipe----------------------- */
+.main-share-content {
+  max-width: 600px;    
+  margin: 0 auto;     
+  padding: 3rem 1rem;  
+  font-family: 'DM Sans';
+  text-align: center; 
+}
 
-   
-  
+.main-share-content h3 {
+  font-weight: normal;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #212121;
+}
+
+.main-share-content form {
+  text-align: left;    
+}
+
+.main-share-content label {
+  display: block;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #212121;
+}
+
+.main-share-content input[type="text"],
+.main-share-content textarea,
+.main-share-content select,
+.main-share-content input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'DM Sans';
+}
+
+.main-share-content input[type="text"]:focus,
+.main-share-content textarea:focus,
+.main-share-content select:focus,
+.main-share-content input[type="file"]:focus{
+    border: 1.4px solid #861F1F;
+    box-shadow: 0 0 2px #861F1F;
+    outline: none;
+}
+
+.main-share-content textarea{
+    resize: none;
+}
+
+
+.main-share-content button {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  background-color: #861F1F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 3rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.main-share-content button:hover {
+  background-color: #A42A2A;
+
+}
+
+.share-error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -0.45rem;
+  margin-bottom: 1rem;
+}
+.custom-file-upload {
+width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'DM Sans';
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover{
+    border: 1.4px solid #861F1F;
+    box-shadow: 0 0 2px #861F1F;
+}
+
+/* Style all icons inside form labels */
+form label i {
+  margin-right: 8px;
+  color: #212121; 
+  font-size: 1rem;
+}
+form button i{
+    margin-left: 8px; 
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+/* go back button*/
+.btn-back {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: #861F1F;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-back:hover {
+  color: #A42A2A;
+}
+
+#login-warning{
+    text-align: center;
+    padding: 7% 12%;
+    height: 40vh;
+    margin: 20px auto;
+    font-size: 1.4rem;
+    font-family: 'DM Sans';
+}
+
+

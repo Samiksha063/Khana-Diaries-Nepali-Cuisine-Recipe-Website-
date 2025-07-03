@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Khana Diaries - Share your recipe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  </head>
+<body>
+<!-- header -->
+     <header>
+            <div id="logo-content">
+            <a href="../index.html#home" id="logo">
+            <img src="../images/logo.png" alt="khana diaries logo">
+            <h1 id="khana" style="color: #D63829;">Khana </h1>
+            <h1 id="diaries" style="color: #E6A700;"> Diaries</h1>
+            </a>
+        </div>
+
+        <nav>
+            <!-- navlinks -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./allRecipes.html">All Recipes</a></li>
+                <li><a href="share-now.html#share-now" class="active">Share Recipes</a></li>
+                <li><a href="./about.html">AboutUs</a></li>
+            </ul>
+
+            <!-- search -->
+             <div class="search-container">
+             <input type="text" id="search" name="search" placeholder="Search Recipes">
+             <span id="clearSearch">&times;</span>
+             </div>
+
+             <!-- login button -->
+              <a href="./login.html">Login</a>
+              <button id="logoutBtn" style="display:none;">Logout</button>
+        </nav>
+
+     </header>
+
+    <div class="share-container">
+        <section id="share-recipe">
+        <div class="share-recipe-img">
+            <img src="../images/share-recipe.jpg" alt="share-recipe">
+        </div>
+
+        <div class="share-recipe-content">
+            <h1>Share Your Recipes</h1>
+            <p>We believe great food brings people together. If you have a favorite homemade recipe whether it's a family treasure or your own creation , we'd love for you to share it with the Khana Diaries community.</p>
+        <br>
+        <p>Every recipe carries a memory and love. By sharing yours, you share a piece of your heart and heritage with others to cherish and enjoy.</p>
+        </div>
+        </div>
+     </section>
+
+        <section class="main-share-content" id="share-section" style="display: none;">
+            
+        <form id="shareForm">
+          <h3>Submit Recipe</h3>
+      <label for="title"><i class="fas fa-utensils"></i>Recipe Title:</label>
+      <input type="text" id="title" name="title" placeholder="Add Title"/>
+      <p id="title-error" class="share-error"></p>
+
+      <label for="prep-time"><i class="fa-solid fa-clock"></i>Preparation Time:</label>
+      <input type="text" id="prep-time" name="prep-time" placeholder="e.g., 30 min, 1 hr">
+      <p id="prep-time-error" class="share-error"></p>
+
+      <label for="cook-time"><i class="fa-solid fa-fire-burner"></i>Cook Time:</label>
+      <input type="text" id="cook-time" name="cook-time" placeholder="e.g., 30 min, 1 hr">
+      <p id="cook-time-error" class="share-error"></p>
+
+      <label for="description"><i class="fas fa-align-left"></i>Description:</label>
+      <textarea id="description" name="description" rows="10" placeholder="Introduce your recipe"></textarea>
+      <p id="description-error" class="share-error"></p>
+
+      <label for="ingredients"><i class="fas fa-list"></i>Ingredients:</label>
+      <textarea id="ingredients" name="ingredients" rows="20" placeholder="Add ingredients"></textarea>
+      <p id="ingredients-error" class="share-error"></p>
+
+      <label for="instructions"><i class="fas fa-receipt"></i>Instructions:</label>
+      <textarea id="instructions" name="instructions"  rows="20" placeholder="Write step by step instructions"></textarea>
+      <p id="instructions-error" class="share-error"></p>
+
+      <label for="category"><i class="fas fa-tags"></i>Category:</label>
+      <select id="category">
+        <option disabled selected>Choose category</option>
+        <option>Snacks</option>
+        <option>Main Dish</option>
+        <option>Drinks</option>
+        <option>Dessert</option>
+        <option>Side Dish</option>
+        <option>Pickle</option>
+      </select>
+      <p id="category-error" class="share-error"></p>
+
+      <label for="pro-tips"><i class="fa-solid fa-lightbulb"></i>Pro Tips:</label>
+      <textarea id="pro-tips" name="pro-tips" rows="10"  placeholder="Write your pro tips"></textarea>
+
+      <label for="image"><i class="fas fa-image"></i>Recipe Image:</label>
+      <input type="file" id="image" accept="image/*" style="display: none;"/>
+      <label for="image" class="custom-file-upload">Add Image</label>
+      <p id="file-name"></p>
+  
+      <p id="image-error" class="share-error"></p>
+
+      <button type="submit" id="shareSubmitBtn">Share Now<i class="fas fa-paper-plane"></i></button>
+
+      
+    </form>
+    <p id="share-message"></p>
+    </section>
+    </div>   
+
+    <div id="login-warning">
+      <span>Bring your recipe to the table. <a href="./login.html" style="color: #861F1F;">Login</a> to publish</span>
+    </div>
+         <!-- footer -->
+     <footer>
+
+        <section class="footer-content">
+        <div class="about-khana">
+            <h1>Khana Diaries</h1>
+            <p>Our website ensures that you <span>will <br></span>  get the best recipe to cook  <span>for <br></span> yourself and your loved ones.</p>
+        </div>
+
+        <!-- links -->
+        <div class="quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./allRecipes.html">All Recipes</a></li>
+                <li><a href="./share-now.html">Share Recipes</a></li>
+                <li><a href="about.html#about">About Us</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- images -->
+         <div class="footer-image">
+            <img src="../images/selroti.jpg" id="sel" alt="">
+            <img src="../images/dhindo.jpg" id="dhindo" alt="">
+            <img src="../images/dal-bhat.jpg" id="bhat" alt="">
+            <img src="../images/MOMO.jpg" id="momo" alt="">
+         </div>
+
+         </section>
+
+
+         <!-- copyright -->
+          <div class="copyright">
+            Copyright &copy; 2025 Khana Diaries. All Rights Reserved
+          </div>
+     </footer>
+     
+      <script src="../script/main.js"></script>
+    <script src="../script/search.js"></script>
+    <script src="../script/login.js"></script>
+    <script src="../script/shareNow.js"></script>
+</body>
+</html>
