@@ -114,6 +114,8 @@ logoutBtn.addEventListener("click", () => {
   logoutBtn.style.display = "none";
   const confirmMessage = document.getElementById("login-message");
   confirmMessage.textContent = "";
+  window.location.href = "../index.html";
+
 });
 
 //register
