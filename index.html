@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<title>Khana Diaries - Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Khana Diaries - Home Page</title>
     <!-- <link rel="icon" type="image/png" href="/images/"> -->
 
 </head>
@@ -48,14 +49,38 @@
 
     <!-- hero-image  -->
      <section id="home">
-        <!-- welcome users -->
-         <div id="welcome">
-            <h1>Welcome to Khana Diaries</h1>
-            <p>Discover authentic taste of Nepali Kitchen</p>
-        </div>
+        <div class="slider">
+            <div class="slide active">
+                <img src="./images/background.jpg" alt="Slide 1">
+                <div class="slide-text">
+                    <h1>Welcome to Khana Diaries</h1>
+                    <p>Discover authentic taste of Nepali Kitchen</p>
+                </div>
+            </div>
 
-        <div id="allRecipes-btn">
-        <a href="pages/allRecipes.html" >Explore Recipes</a>
+            <div class="slide">
+      <img src="./images/momo-image-slider.jpg" alt="Slide 2">
+      <div class="slide-text">
+        <h1>Spices of Nepal</h1>
+        <p>Every dish tells a story</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="images/chowmein-image-slider.jpg" alt="Slide 3">
+      <div class="slide-text">
+        <h1>Tradition on a Plate</h1>
+        <p>From mom's kitchen to your screen</p>
+      </div>
+    </div>
+
+            <div class="slide">
+      <img src="images/samay-baji-image-slider.jpg" alt="Slide 4">
+      <div class="slide-text">
+        <h1>Celebrate Food, Celebrate Culture</h1>
+        <p>Because every meal is more than just taste</p>
+      </div>
+    </div>
         </div>
      </section>
 
@@ -315,5 +340,20 @@
     <script src="script/recipeFilter.js"></script>
     <script src="script/search.js"></script>
     <script src="script/slider.js"></script>
+    <script>
+        $(document).ready(function(){
+            let slides = $(".slide");
+            console.log(slides);
+            let index = 0;
+
+            function nextImageSlide(){
+                 slides.eq(index).removeClass("active");  // hide current
+                index = (index + 1) % slides.length;     // move to next
+                slides.eq(index).addClass("active");     // show next
+            }
+
+             setInterval(nextImageSlide, 4000);
+  });
+    </script>
 </body>
 </html>

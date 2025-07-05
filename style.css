@@ -210,50 +210,60 @@ nav input[type="text"]{
 }
 
 /* ------------------hero-image------------------------- */
-#home{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
+.slider{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide{
+    display: none;
+    height: 100%;
     width: 100%;
+    position: absolute;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
+}
+
+.slide-text{
+    position: absolute;
+    top: 30%;
+    left: 10%;
     color: white;
-    padding: 40px 0 60px 80px;
+    animation: fadeInUp 1s ease-out 0.5s both;
 }
 
-#welcome{
-    margin-top: 10%;
+.slide-text h1 {
+  font-size: 4rem;
+  font-family: 'Playfair Display';
 }
 
-#welcome h1{
-    font-family: 'Playfair Display';
-    font-size: 3.2rem;
+.slide-text p {
+  font-size: 1.1rem;
+  font-family: 'DM Sans';
+  letter-spacing: 1.5px;
+  
 }
 
-#welcome p{
-    font-family: 'DM Sans';
-    font-size: 1.1rem;
-    letter-spacing: 1.5px;
-}
-
-/* explore recipe button */
-#home  a{
-    text-decoration: none;
-    color: white;
-    font-family: 'DM Sans';
-    background-color: #388E3C;
-    border-radius: 25px;
-    padding: 16px 22px;
-    transition: all 0.3s ease-in-out;
-}
-
-#home a:hover{
-    background-color: #43A047 ;
-}
-
-#home #allRecipes-btn{
-    margin-top: 8%;
-}
+ @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateX(0px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(30px);
+            }
+        }
 
 /* hero image media query */
 @media(max-width:700px) {

@@ -13,11 +13,13 @@ imageInput.addEventListener('change', () => {
 const loggedInUser = localStorage.getItem("loggedInUser");
   const shareSection = document.getElementById("share-section");
   const loginWarning = document.getElementById("login-warning");
+  const loginLink = document.querySelector('a[href="./login.html"]');
 
   if (loggedInUser) {
     // User is logged in, show form
     shareSection.style.display = "block";
     loginWarning.style.display = "none";
+    if (loginLink) loginLink.style.display = "none";
   } else {
     // Not logged in, show login message
     shareSection.style.display = "none";
