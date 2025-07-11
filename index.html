@@ -49,40 +49,49 @@
 
     <!-- hero-image  -->
      <section id="home">
-        <div class="slider">
-            <div class="slide active">
-                <img src="./images/background.jpg" alt="Slide 1">
-                <div class="slide-text">
-                    <h1>Welcome to Khana Diaries</h1>
-                    <p>Discover authentic taste of Nepali Kitchen</p>
-                </div>
-            </div>
-
-            <div class="slide">
-      <img src="./images/momo-image-slider.jpg" alt="Slide 2">
-      <div class="slide-text">
-        <h1>Spices of Nepal</h1>
-        <p>Every dish tells a story</p>
-      </div>
-    </div>
-
-    <div class="slide">
-      <img src="images/chowmein-image-slider.jpg" alt="Slide 3">
-      <div class="slide-text">
-        <h1>Tradition on a Plate</h1>
-        <p>From mom's kitchen to your screen</p>
-      </div>
-    </div>
-
-            <div class="slide">
-      <img src="images/samay-baji-image-slider.jpg" alt="Slide 4">
-      <div class="slide-text">
-        <h1>Celebrate Food, Celebrate Culture</h1>
-        <p>Because every meal is more than just taste</p>
-      </div>
-    </div>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide">
+        <img src="./images/background.jpg" alt="Slide 1">
+        <div class="slide-text">
+          <h1>Welcome to Khana Diaries</h1>
+          <p>Discover authentic taste of Nepali Kitchen</p>
         </div>
-     </section>
+      </div>
+
+      <div class="slide">
+        <img src="./images/momo-image-slider.jpg" alt="Slide 2">
+        <div class="slide-text">
+          <h1>Spices of Nepal</h1>
+          <p>Every dish tells a story</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./images/chowmein-image-slider.jpg" alt="Slide 3">
+        <div class="slide-text">
+          <h1>Tradition on a Plate</h1>
+          <p>From mom's kitchen to your screen</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./images/samay-baji-image-slider.jpg" alt="Slide 4">
+        <div class="slide-text">
+          <h1>Celebrate Food, Celebrate Culture</h1>
+          <p>Because every meal is more than just taste</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider-dots">
+        <div class="dot" class="active-dot" data-index = "0"></div>
+        <div class="dot" data-index = "1"></div>
+        <div class="dot" data-index = "2"></div>
+        <div class="dot" data-index = "3"></div>
+    </div>
+</section>
+
 
 
     <!-- about -->
@@ -340,20 +349,7 @@
     <script src="script/recipeFilter.js"></script>
     <script src="script/search.js"></script>
     <script src="script/slider.js"></script>
-    <script>
-        $(document).ready(function(){
-            let slides = $(".slide");
-            console.log(slides);
-            let index = 0;
+    
 
-            function nextImageSlide(){
-                 slides.eq(index).removeClass("active");  // hide current
-                index = (index + 1) % slides.length;     // move to next
-                slides.eq(index).addClass("active");     // show next
-            }
-
-             setInterval(nextImageSlide, 4000);
-  });
-    </script>
 </body>
 </html>
