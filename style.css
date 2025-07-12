@@ -34,6 +34,13 @@ header{
     background-color: white;
 }
 
+/* .nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+} */
+
 /* logo */
 #logo-content img{
     width: 50px;
@@ -177,35 +184,66 @@ nav .login-btn:hover{
     border: none;
 }
 
-/* navbar media query */
-@media(max-width:700px){
-
-    header{
-    padding: 14px 45px;
-    justify-content: space-between;
-}
-    #logo-content h1{
+.hamburger{
+    display: none;
+    color: #212121;
+    cursor: pointer;
     font-size: 1.5rem;
-    text-align: center;
+}
+
+/* navbar media query */
+@media(max-width:768px){
+    header{
+    padding: 10px 30px;
+}
+ nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+    .nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+    /* nav ul, .search-container, .login-btn, #logoutBtn{
+        display: none;
+    } */
+
+    .hamburger{
+        display: block;
     }
 
-    nav ul{
-    justify-content: space-evenly; 
+    nav.active-menu {
+    display: flex;
+  }
+
+ nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 8px 16px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  #search {
+  padding: 5px 28px 5px 28px; 
+  width: 100px;
 }
 
-    nav{
-    font-size: 0.7rem;
-    gap: 10px;
-}
-
-nav a{
-    padding: 0.5rem ;
-}
-
-nav input[type="text"]{
-    padding: 4px 8px 4px 28px;
-    width: 20%;
-}
 
 }
 

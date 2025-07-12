@@ -15,13 +15,17 @@
 <body>
     <!-- header -->
      <header>
-            <div id="logo-content">
-            <a href="index.html#home" id="logo">
+        <div class="nav-top">
+        <div id="logo-content">
+             <a href="index.html#home" id="logo">
             <img src="./images/logo.png" alt="khana diaries logo">
-            <h1 id="khana" style="color: #D63829;">Khana </h1>
-            <h1 id="diaries" style="color: #E6A700;"> Diaries</h1>
-            </a>
-        </div>
+            <h1 id="khana" style="color: #D63829;">Khana</h1>
+            <h1 id="diaries" style="color: #E6A700;">Diaries</h1>
+      </a>
+    </div>
+
+    <div class="hamburger">&#9776;</div>
+  </div>
 
         <nav>
             <!-- navlinks -->
@@ -349,6 +353,16 @@
     <script src="script/recipeFilter.js"></script>
     <script src="script/search.js"></script>
     <script src="script/slider.js"></script>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector("nav");
+
+        hamburger.addEventListener("click", () =>{
+            nav.classList.toggle("active-menu");
+            console.log("hamburger menu worked");
+
+        });
+    </script>
     
 
 </body>
