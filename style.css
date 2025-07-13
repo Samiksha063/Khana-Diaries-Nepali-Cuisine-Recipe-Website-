@@ -1449,7 +1449,8 @@ cursor: pointer;
 .main-share-content input[type="text"],
 .main-share-content textarea,
 .main-share-content select,
-.main-share-content input[type="file"] {
+.main-share-content input[type="file"],
+.main-share-content input[type="date"] {
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -1463,7 +1464,8 @@ cursor: pointer;
 .main-share-content input[type="text"]:focus,
 .main-share-content textarea:focus,
 .main-share-content select:focus,
-.main-share-content input[type="file"]:focus{
+.main-share-content input[type="file"]:focus,
+.main-share-content input[type="date"]:focus{
     border: 1.4px solid #861F1F;
     box-shadow: 0 0 2px #861F1F;
     outline: none;

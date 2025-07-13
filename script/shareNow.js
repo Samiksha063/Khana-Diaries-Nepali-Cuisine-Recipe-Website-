@@ -38,6 +38,7 @@ const description = document.getElementById("description").value;
 const ingredients = document.getElementById("ingredients").value;
 const instructions = document.getElementById("instructions").value;
 const category = document.getElementById("category").value;
+const date = document.getElementById("date").value;
 const image = document.getElementById("image").value;
 
 const titleError = document.getElementById("title-error");
@@ -47,6 +48,7 @@ const descriptionError = document.getElementById("description-error");
 const ingredientsError = document.getElementById("ingredients-error");
 const instructionsError = document.getElementById("instructions-error");
 const categoryError = document.getElementById("category-error");
+const dateError = document.getElementById("date-error");
 const imageError = document.getElementById("image-error");
 const shareMessage = document.getElementById("share-message");
 
@@ -57,6 +59,7 @@ descriptionError.textContent = "";
 ingredientsError.textContent = "";
 instructionsError.textContent = "";
 categoryError.textContent = "";
+dateError.textContent = "";
 imageError.textContent = "";
 shareMessage.textContent = "";
 
@@ -102,6 +105,20 @@ if(category === "" || category === "Choose category"){
         isValid = false;
 
 }
+
+  if (date === "") {
+        dateError.textContent = "Please pick a date";
+        isValid = false;
+    } else {
+        const selectedDate = new Date(date);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); //midnight time
+
+        if (selectedDate > today) {
+            dateError.textContent = "Cooked date cannot be in the future";
+            isValid = false;
+        }
+    }
 
 if(image === ""){
     imageError.textContent = "Please uplaod an image of the dish";
