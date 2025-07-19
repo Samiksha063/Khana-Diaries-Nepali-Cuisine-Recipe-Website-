@@ -1487,7 +1487,10 @@ cursor: pointer;
     padding: 1% 16% 3% 12%;
 }
 
-.ingredients h2, .ingredients h3, .instructions h2, .instructions h3{
+.ingredients h2, .instructions h2{
+  font-size: 20px;
+}
+.ingredients h3, .instructions h3{
     font-size: 16px;
 }
 
@@ -1502,7 +1505,7 @@ cursor: pointer;
 /* tips */
 .tips{
     padding: 15px; 
-    width: 70%; 
+    width: 72%; 
 }
 
 .tips h3{
