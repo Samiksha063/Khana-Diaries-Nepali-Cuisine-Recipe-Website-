@@ -1401,6 +1401,158 @@ cursor: pointer;
       vertical-align: middle;
     }
 
+
+@media(max-width:768px){
+  .links a{
+    font-size: 12px;
+ }
+
+ .recipeTitle h1{
+    font-size: 1.4rem;
+
+ }
+
+  .date{
+    margin-top: -6px;
+ }
+.posted-date{
+    font-size: 0.7rem;
+}
+
+ .dish-image{
+    padding: 2% 16% 2% 12%;
+ }
+
+ .dish-image img{
+    width: 100%;
+    height: 250px;
+ }
+
+ .image-gallery{
+    width: 100%;
+    gap: 10px;
+    padding: 0 16% 1.5% 12%;
+ }
+
+ .image-gallery img{
+    height: 70px;
+    width: 70px;
+ }
+
+ .description{
+    padding: 1% 16% 3% 12%;
+}
+
+.description p {
+    line-height: 1.6rem;
+    font-size: 14px;
+}
+
+.description .line{
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* timing */
+.timing{
+    display: flex;
+    padding: 1% 16% 3% 12%;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.prep-time h5, .cook-time h5 {
+    display: flex;               
+    align-items: center; /* vertically center icon + text */
+    gap: 4px;            /* space between icon and text */
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+.timing .small-line{
+  margin-left: 8px;
+}
+
+.cook-time p, .prep-time p{
+  font-size: 14px;
+}
+
+.timer-icon, .ing-icon, .ins-icon{
+  height: 20px;
+  width: 20px;
+}
+
+/* ingredients */
+.ingredients, .instructions{
+    padding: 1% 16% 3% 12%;
+}
+
+.ingredients h2, .ingredients h3, .instructions h2, .instructions h3{
+    font-size: 16px;
+}
+
+.ingredients h2,.instructions h2{
+    gap: 4px; 
+}
+
+.ingredients li, .instructions li{
+  font-size: 14px;
+}
+
+/* tips */
+.tips{
+    padding: 15px; 
+    width: 70%; 
+}
+
+.tips h3{
+    gap: 4px;
+    font-size: 16px;
+}
+
+.tips li{
+    font-size: 14px;
+}
+
+.tips img{
+    width: 20px;
+    height: 20px;
+}
+
+.tips ul{
+  margin-top: 8px;
+}
+
+.tips li{
+    padding-left: 10px;
+    line-height: 1.6rem;
+}
+
+.happy-cooking{
+    font-size: 2.2rem;
+    margin-top: 4%;
+}
+
+/* you might like */
+#you-might-like{
+    padding:1% 16% 3% 12% ;
+    margin-top: 5%;
+    
+}
+
+#you-might-like h2{
+    font-size: 1.5rem;
+}
+#you-might-like h2 .star-icon {
+      margin-right: 6px;
+      height: 22px;
+      width: 22px;
+    }
+
+
+
+}
+
     /* --------------------login page--------------------------- */
     #login-page{
         display: flex;
