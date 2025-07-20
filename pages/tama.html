@@ -71,9 +71,18 @@
 
 
 
-<!-- momo image -->
+<!-- tama image -->
  <div class="dish-image">
-    <img src="../images/aloo-tama.jpg" alt="">
+    <img src="../images/aloo-tama.jpg" alt="" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original tama -->
+     <img src="../images/aloo-tama.jpg" alt="original tama" class="gallery" onclick="changeImage(this)">
+
+     <!-- other tama -->
+      <img src="../images/tama1.jpg" alt="tama2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/tama2.jpg" alt="tama3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -104,7 +113,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>500 gram Bamboo shoot(tama)</li>
         <li>2 medium potatoes(cubed)</li>
@@ -125,7 +134,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <h3>Prepare the Bamboo Shoots</h3>
     <ol>
         <li>To prepare the bamboo shoots, first, remove the outer layers until the soft compact white flesh appears. Cut them into half or quarters, and then cut them into thin slices. Wash the bamboo slices and boil them in water in a pot for about 20 minutes. This will make the shoots softer and reduce their bitterness. Drain the water and immerse the shoots in cold water.</li>
@@ -232,8 +241,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

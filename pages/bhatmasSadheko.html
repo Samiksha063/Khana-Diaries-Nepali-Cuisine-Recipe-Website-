@@ -68,9 +68,18 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- bhatmas image -->
  <div class="dish-image">
-    <img src="../images/bhatmas-sadheko.jpg" alt="chatamari">
+    <img src="../images/bhatmas-sadheko.jpg" alt="bhatmas" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original bhatmas -->
+     <img src="../images/bhatmas-sadheko.jpg" alt="original bhatmas" class="gallery" onclick="changeImage(this)">
+
+     <!-- other bhatmas -->
+      <img src="../images/bhatmas1.jpg" alt="bhatmas2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/bhatmas2.jpg" alt="bhatmas3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -101,7 +110,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>1 cup soybeans (bhatmas)</li>
         <li>2 tablespoons mustard oil</li>
@@ -115,7 +124,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <h3>Roast Soyabeans</h3>
     <ol>
         <li>Dry roast the soybeans in a pan over medium heat for 4-5 minutes, stirring until they puff up slightly and are crunchy. Remove from heat.</li>
@@ -219,8 +228,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

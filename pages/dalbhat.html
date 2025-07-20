@@ -73,9 +73,18 @@
 
 
 
-<!-- momo image -->
+<!-- dalbhat image -->
  <div class="dish-image">
-    <img src="../images/dal-bhat.jpg" alt="">
+    <img src="../images/dal-bhat.jpg" alt="" id="main-image">
+ </div>
+
+ <div class="image-gallery">
+    <!-- original dalbhat -->
+     <img src="../images/dal-bhat.jpg" alt="original dalbbhat" class="gallery" onclick="changeImage(this)">
+
+     <!-- other dalbhat -->
+      <img src="../images/dal-bhat1.jpg" alt="dalbhat2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/dal-bhat3.jpg" alt="dalbhat3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -106,7 +115,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <h3>Red Lentil Soup (Masoor Dal)</h3>
     <ul>
         <li>1 cup Red Lentils (Masoor Dal, Yellow or Mixed)</li>
@@ -132,7 +141,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <h3>Cook the rice</h3>
     <ol>
         <li>Rinse the rice well in cold water 2-3 times until water runs clear.</li>
@@ -249,8 +258,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

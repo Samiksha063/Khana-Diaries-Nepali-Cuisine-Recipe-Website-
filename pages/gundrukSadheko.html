@@ -68,9 +68,18 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- gundruk saadheko image -->
  <div class="dish-image">
-    <img src="../images/gundruk-sadheko.jpg" alt="gundruk">
+    <img src="../images/gundruk-sadheko.jpg" alt="gundruk" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original grundruk -->
+     <img src="../images/gundruk-sadheko.jpg" alt="original gundruk" class="gallery" onclick="changeImage(this)">
+
+     <!-- other gundruk -->
+      <img src="../images/gundruk1.jpg" alt="gundruk2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/gundruk2.jpg" alt="gundruk3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -101,7 +110,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>1 cup dry gundruk</li>
         <li>2 tablespoons mustard oil</li>
@@ -116,7 +125,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <h3>Soak Gundruk</h3>
     <ol>
         <li>Soak gundruk in warm water for 10-15 minutes until soft.</li>
@@ -223,8 +232,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

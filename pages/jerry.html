@@ -68,9 +68,18 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- jerry image -->
  <div class="dish-image">
-    <img src="../images/jerry.jpg" alt="jerry">
+    <img src="../images/jerry.jpg" alt="jerry" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original jerry -->
+     <img src="../images/jerry.jpg" alt="original jerry" class="gallery" onclick="changeImage(this)">
+
+     <!-- other jerry -->
+      <img src="../images/jerry1.jpg" alt="jerry2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/jerry2.jpg" alt="jerry3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -101,7 +110,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <h3>Batter</h3>
     <ul>
         <li>1 cup all-purpose flour (maida)</li>
@@ -124,7 +133,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <h3>Prepare the batter</h3>
     <ol>
         <li>Mix flour, rice flour, baking soda (or yeast), and food color.</li>
@@ -239,8 +248,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
      <script src="../script/hamburger-menu.js"></script>
+     <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

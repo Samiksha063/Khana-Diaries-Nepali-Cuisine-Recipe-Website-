@@ -68,9 +68,19 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- momoachar image -->
  <div class="dish-image">
-    <img src="../images/momo-achar.jpg" alt="">
+    <img src="../images/momo-achar.jpg" alt="" id="main-image">
+ </div>
+
+ 
+ <div class="image-gallery">
+    <!-- original momoachar -->
+     <img src="../images/momo-achar.jpg" alt="original momo" class="gallery" onclick="changeImage(this)">
+
+     <!-- other momoachar -->
+      <img src="../images/momoachar1.jpg" alt="momoachar2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/momoachar2.jpg" alt="momoachar3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -101,7 +111,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>&#189; teaspoon cumin seed</li>
         <li>Chopped onion</li>
@@ -119,7 +129,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <ol>
         <li>In a medium size pan, heat oil and add cumin seed.</li>
         <li>Once it starts to splutter, add chopped onion and cook for 2-3 minutes until translucent.</li>
@@ -216,8 +226,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

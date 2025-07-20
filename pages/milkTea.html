@@ -68,9 +68,18 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- milktea image -->
  <div class="dish-image">
-    <img src="../images/milk-tea.jpg" alt="milk tea">
+    <img src="../images/milk-tea.jpg" alt="milk tea" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original milktea -->
+     <img src="../images/milk-tea.jpg" alt="original milktea" class="gallery" onclick="changeImage(this)">
+
+     <!-- other milktea -->
+      <img src="../images/milktea1.jpg" alt="milktea2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/milktea2.jpg" alt="milktea3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -101,7 +110,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>1 cup water</li>
         <li>1 cup milk (or adjust as preferred)</li>
@@ -116,7 +125,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <ol>
         <li>In a saucepan, add water, cardamom, ginger, and other spices.</li>
         <li>Boil for 2-3 minutes to let the flavors release.</li>
@@ -215,8 +224,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

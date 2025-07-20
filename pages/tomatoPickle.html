@@ -68,9 +68,18 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- tomatoachar image -->
  <div class="dish-image">
-    <img src="../images/tomato-achar.jpg" alt="tomato achar">
+    <img src="../images/tomato-achar.jpg" alt="tomato achar" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original tomatoachar -->
+     <img src="../images/tomato-achar.jpg" alt="original tomatoachar" class="gallery" onclick="changeImage(this)">
+
+     <!-- other tomatoachar -->
+      <img src="../images/tomatoachar1.jpg" alt="tomatoachar2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/tomatoachar2.jpg" alt="tomatoachar3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -101,7 +110,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>4-5 ripe tomatoes (medium, juicy ones)</li>
         <li>1 tablespoon garlic (roughly chopped for grinding)</li>
@@ -113,7 +122,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <ol>
         <li>Roast tomatoes over open flame for smoky flavor, or boil until soft. Let them cool a little.</li>
         <li>On the silauta, grind garlic, ginger, and green chilies to a coarse paste.</li>
@@ -140,7 +149,7 @@
     <h2><img src="../images/star-icon.svg" class="star-icon" alt="star-icon">You might like</h2>
     <div class="allRecipeContainer">
 
-         <div id="momokoachar" class="allRecipeCard" data-category="pickles">
+         <div id="tomatoacharkoachar" class="allRecipeCard" data-category="pickles">
                 <img src="../images/momo-achar.jpg" alt="momo ko achar">
                 <div class="content">
                 <h3>Momo ko Achar</h3>
@@ -210,9 +219,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+<script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
 
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

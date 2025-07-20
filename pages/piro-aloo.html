@@ -68,9 +68,18 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- piroaloo image -->
  <div class="dish-image">
-    <img src="../images/piroo-aloo.jpg" alt="piroo aloo">
+    <img src="../images/piroo-aloo.jpg" alt="piroo aloo" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original piroaloo -->
+     <img src="../images/piroo-aloo.jpg" alt="original piroaloo" class="gallery" onclick="changeImage(this)">
+
+     <!-- other piroaloo -->
+      <img src="../images/piroaloo1.jpg" alt="piroaloo2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/piroaloo2.jpg" alt="piroaloo3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -101,7 +110,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>3-4 medium potatoes (boiled, peeled, and cut into pieces)</li>
         <li>2 tablespoons mustard oil (or any cooking oil)</li>
@@ -118,7 +127,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <ol>
         <li>Heat mustard oil until it lightly smokes (if using).</li>
         <li>Add fenugreek seeds and let them turn black.</li>
@@ -218,8 +227,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

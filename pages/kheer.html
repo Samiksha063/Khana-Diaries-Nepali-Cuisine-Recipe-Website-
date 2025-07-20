@@ -68,9 +68,17 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- kheer image -->
  <div class="dish-image">
-    <img src="../images/kheer.jpg" alt="kheer">
+    <img src="../images/kheer.jpg" alt="kheer" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original kheer -->
+     <img src="../images/kheer.jpg" alt="original kheer" class="gallery" onclick="changeImage(this)">
+
+     <!-- other kheer -->
+      <img src="../images/kheer2.jpg" alt="kheer2" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -93,7 +101,7 @@
 
     <div class="border"></div>
     <div class="cook-time">
-        <h5><img src="../images/cook.svg" alt="Cook icon" class="timer-icon">Fermentation Time</h5>
+        <h5><img src="../images/cook.svg" alt="Cook icon" class="timer-icon">Cook Time</h5>
         <p>30 - 40 mins</p>
     </div>
   </div>
@@ -101,8 +109,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
-    <h3>Batter</h3>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>1/2 cup rice (preferably short grain like jeera masino)</li>
         <li>1 liter full-fat milk</li>
@@ -111,11 +118,10 @@
         <li>A few almonds or pistachios for garnish (optional)</li>
         <li>1 tablespoon ghee (for roasting nuts)</li>
     </ul>
-
+</div>
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
-    <h3>Prepare the batter</h3>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <ol>
         <li>Rinse rice well and soak for 10-15 minutes. Drain before cooking.</li>
         <li>In a heavy-bottomed pot, bring milk to a boil.</li>
@@ -127,7 +133,7 @@
         <li>Serve warm or chilled, as you prefer. Garnish with nuts if desired.</li>
     </ol>
    </div>
-   </div>
+   
 
    <!-- tips -->
    <div class="tips">
@@ -214,8 +220,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 

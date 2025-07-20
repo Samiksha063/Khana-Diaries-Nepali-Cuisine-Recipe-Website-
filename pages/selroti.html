@@ -68,9 +68,18 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- selroti image -->
  <div class="dish-image">
-    <img src="../images/selroti.jpg" alt="sel">
+    <img src="../images/selroti.jpg" alt="sel" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original selroti -->
+     <img src="../images/selroti.jpg" alt="original selroti" class="gallery" onclick="changeImage(this)">
+
+     <!-- other selroti -->
+      <img src="../images/selroti1.jpg" alt="selroti2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/selroti2.jpg" alt="selroti3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -102,7 +111,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>Rice (soaked for 6-8 hours, then drained)</li>
         <li>1/2 cup sugar (adjust to taste)</li>
@@ -115,7 +124,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <h3>Prepare the batter</h3>
     <ol>
         <li>Grind the soaked rice into a smooth, slightly thick batter using milk or water.</li>
@@ -223,8 +232,22 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
+
 
 
 

@@ -68,9 +68,18 @@
  </div>
 </div>
 
-<!-- momo image -->
+<!-- saag image -->
  <div class="dish-image">
-    <img src="../images/saag.jpg" alt="chatamari">
+    <img src="../images/saag.jpg" alt="chatamari" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original saag -->
+     <img src="../images/saag.jpg" alt="original saag" class="gallery" onclick="changeImage(this)">
+
+     <!-- other saag -->
+      <img src="../images/saag1.jpg" alt="saag2" class="gallery" onclick="changeImage(this)">
+      <img src="../images/saag2.jpg" alt="saag3" class="gallery" onclick="changeImage(this)">
  </div>
 
  <!-- description -->
@@ -101,7 +110,7 @@
   <div class="recipe-container">
   <!-- ingredients -->
    <div class="ingredients">
-    <h2><img src="../images/ing-img.svg" alt="ingredients icon">Ingredients: </h2>
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
     <ul>
         <li>Fresh spinach (washed and chopped)</li>
         <li>2 tablespoons mustard oil (for authentic flavor)</li>
@@ -113,7 +122,7 @@
 
     <!-- instructions -->
    <div class="instructions">
-    <h2> <img src="../images/inst-img.svg" alt="instruction icon">Instructions: </h2>
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
     <h3>Heat oil and temper spices</h3>
     <ol>
         <li>Heat mustard oil in a pan until lightly smoking.</li>
@@ -220,8 +229,21 @@
      </footer>
  
     <script src="../script/search.js"></script>
-    <script src="../script/main.js"></script>
     <script src="../script/hamburger-menu.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
 
 
 
