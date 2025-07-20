@@ -108,6 +108,7 @@ switchText.addEventListener("click", (e) => {
 logoutBtn.addEventListener("click", () => {
   // Clear stored user
   localStorage.removeItem("loggedInUser");
+  window.location.href = "../index.html";
 
   // Show login form again
   loginBtn.style.display = "block";
@@ -115,7 +116,7 @@ logoutBtn.addEventListener("click", () => {
   const confirmMessage = document.getElementById("login-message");
   confirmMessage.textContent = "";
     // window.location.href = location.origin + location.pathname.replace(/\/[^/]*$/, "./index.html");
-        window.location.href = "../index.html";
+        
 
 
 
