@@ -1876,4 +1876,91 @@ form button i{
     font-family: 'DM Sans';
 }
 
+@media(max-width: 768px){
+  .share-page #share-recipe{
+    padding: 4% 8%;
+    margin-top: -20px;
+  }
+
+   .share-page #share-recipe img {
+        max-width: 150px;
+        height: 250px;
+    }
+  .share-page .share-recipe-img img{
+    width: 350px;
+    height: 500px;
+  }
+
+  .share-page .share-recipe-content .low-para{
+    margin-top: -10px;
+  }
+
+  .share-page .share-recipe-content .top-para{
+    margin-top: 5px;
+  }
+
+  #login-warning{
+    padding: 5% 10%;
+    height: 20vh;
+    font-size: 0.8rem;
+}
+
+.main-share-content {    
+  padding: 2rem 3rem;   
+}
+
+.main-share-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.main-share-content label {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.main-share-content input[type="text"],
+.main-share-content textarea,
+.main-share-content select,
+.main-share-content input[type="file"],
+.main-share-content input[type="date"] {
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.main-share-content button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 2.5rem;
+}
+
+.share-error {
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+.custom-file-upload {
+  padding: 0.3rem;
+}
+
+/* Style all icons inside form labels */
+form label i {
+  margin-right: 6px;
+  color: #212121; 
+  font-size: 0.8rem;
+}
+form button i{
+    margin-left: 6px; 
+  font-size: 0.8rem;
+}
+
+/* go back button*/
+.btn-back {
+  margin-top: 10px;
+  padding: 8px 18px;
+}
+
+
+}
+
 
