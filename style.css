@@ -1697,6 +1697,46 @@ cursor: pointer;
     border: none;
 }
 
+@media(max-width: 768px){
+      #login-page{
+        padding: 3% 10%;
+    }
+
+    .login-container{
+        width: 70vw;
+        box-shadow: 0 0 8px  #d7d7d7;
+    }
+
+    .login-image{
+    width: 0%; 
+    }
+
+    .login-image img{
+    width: 0%;
+  height: 0%;
+    
+   }
+
+   .main-login-content{
+    padding: 18px;
+    margin: 16px auto;
+   }
+
+   .main-login-content h3{
+    font-size: 1.5rem;
+   }
+
+    #login-form{
+    margin-top: 5px;
+   }
+
+   .main-login-content button{
+    margin-top: 30px;
+   }
+
+
+}
+
 /* -----------------share recipe----------------------- */
 .main-share-content {
   max-width: 600px;    
