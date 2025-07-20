@@ -1141,6 +1141,71 @@ footer{
   object-fit: cover;
 }
 
+@media(max-width: 768px){
+  .about-page .about{
+    padding: 4% 8%;
+  }
+
+  .about-page .about img {
+        margin-top: 10%;
+    }
+  .about-page .about-image img{
+    height: 400px;
+    width: 200px;
+  }
+  .about-page .about-content h1{
+    font-size: medium;
+  }
+
+  .about-page .about-content p{
+    font-size: 9px;
+  }
+
+  .mission-vision-container {
+  padding: 5% 10%;
+  gap: 20px;
+}
+
+.mission h2, .vision h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+
+}
+
+.mission p, .vision p {
+  font-size: 0.6rem;
+  line-height: 1.8;
+}
+
+/* <!-- What can you expect from khana diaries --> */
+.expect-section {
+  justify-content: flex-start;
+  padding: 5% 10%;
+  gap: 5%;
+}
+
+.expect-text {
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.expect-text h2 {
+  font-size: 1.4rem;
+}
+
+.expect-text p {
+  font-size: 0.6rem;
+  margin-top: -10px;
+  line-height: 1.6;
+}
+
+/* image size and border */
+.expect-image img {
+  width: 170px; 
+  height: 380px;
+}
+}
+
 
  /* --------------Momo page-------------------  */
  #recipe-nav-links{
