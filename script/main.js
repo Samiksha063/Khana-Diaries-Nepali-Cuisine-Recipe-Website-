@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.removeItem("loggedInUser");
       if (loginBtn) loginBtn.style.display = "inline-block";
       if (logoutBtn) logoutBtn.style.display = "none";
-      window.location.href = "/index.html";
+      window.location.href = "../index.html";
     });
   }
 });

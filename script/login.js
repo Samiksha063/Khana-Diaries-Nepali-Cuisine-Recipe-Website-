@@ -116,6 +116,7 @@ logoutBtn.addEventListener("click", () => {
   const confirmMessage = document.getElementById("login-message");
   confirmMessage.textContent = "";
     // window.location.href = location.origin + location.pathname.replace(/\/[^/]*$/, "./index.html");
+    window.location.href = "../index.html";
         
 
 
