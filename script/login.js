@@ -27,7 +27,7 @@ switchText.addEventListener("click", (e) => {
             console.log("Login page opened successfully");
         }
     } 
-    });
+});
 
 
 //login
@@ -103,24 +103,32 @@ switchText.addEventListener("click", (e) => {
         }
       
     });
+}
+ 
 
     // ------------------ Logout ------------------
-logoutBtn.addEventListener("click", () => {
-  // Clear stored user
-  localStorage.removeItem("loggedInUser");
-  window.location.href = "../index.html";
 
-  // Show login form again
-  loginBtn.style.display = "block";
-  logoutBtn.style.display = "none";
-  const confirmMessage = document.getElementById("login-message");
-  confirmMessage.textContent = "";
-    window.location.href = location.origin + location.pathname.replace(/\/[^/]*$/, "/index.html");
-        
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("loggedInUser");
+      console.log("Logout successfull");
+
+      if (loginBtn) loginBtn.style.display = "block";
+      logoutBtn.style.display = "none";
+
+      const confirmMessage = document.getElementById("login-message");
+      if (confirmMessage) confirmMessage.textContent = "";
+
+      const currentPage = window.location.pathname.split("/").pop();
+      if (currentPage !== "index.html" && currentPage !== "") {
+        window.location.href = "../index.html";
+      } else {
+        window.location.reload();
+      }
+    });
+  }
 
 
-
-});
 
 //register
     registerForm.addEventListener("submit", (e) => {
@@ -238,6 +246,4 @@ logoutBtn.addEventListener("click", () => {
         }
 
     });
-
-}
-});
+    });
