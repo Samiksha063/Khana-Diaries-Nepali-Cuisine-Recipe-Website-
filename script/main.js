@@ -18,8 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.removeItem("loggedInUser");
       if (loginBtn) loginBtn.style.display = "inline-block";
       if (logoutBtn) logoutBtn.style.display = "none";
-      window.location.href = "index.html";
-    });
+      
+ const currentPage = window.location.pathname.split("/").pop();
+  if (currentPage !== "index.html" && currentPage !== "") {
+    window.location.href = "index.html";
+  } else {
+    window.location.reload(); // Just reload if already on homepage
+  }    });
   }
 });
 
