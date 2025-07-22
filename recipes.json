@@ -20,5 +20,13 @@
   { "title": "Chatamari", "id": "chatamari", "url": "chatamari.html" },
   { "title": "Tomato Pickle", "id": "tomatopickle", "url": "tomatoPickle.html" },
   { "title": "Piro Aloo", "id": "pirooaloo", "url": "piro-aloo.html" },
-  { "title": "Momo ko Achar", "id": "momokoachar", "url": "momo-achar.html" }
+  { "title": "Momo ko Achar", "id": "momokoachar", "url": "momo-achar.html" },
+  { "title": "Chowmein", "id": "chowmein", "url": "chowmein.html" },
+  { "title": "Chukauni", "id": "chukauni", "url": "chukauni.html" },
+  { "title": "Thekuwa", "id": "thekuwa", "url": "thekuwa.html" },
+  { "title": "Lapsi Ko Achar(Hog plum pickle)", "id": "lapsiachar", "url": "lapsiAchar.html" },
+  { "title": "Mula Achar(Radish Pickle)", "id": "mulachar", "url": "mulaAchar.html" }
+
+
+
 ]

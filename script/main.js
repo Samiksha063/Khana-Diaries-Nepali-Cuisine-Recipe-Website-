@@ -12,20 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loginBtn) loginBtn.style.display = "inline-block";
     if (logoutBtn) logoutBtn.style.display = "none";
   }
-
-//   if (logoutBtn) {
-//     logoutBtn.addEventListener("click", () => {
-//       localStorage.removeItem("loggedInUser");
-//       if (loginBtn) loginBtn.style.display = "inline-block";
-//       if (logoutBtn) logoutBtn.style.display = "none";
-
-//  const currentPage = window.location.pathname.split("/").pop();
-//   if (currentPage !== "index.html" && currentPage !== "") {
-//     window.location.href = "index.html";
-//   } else {
-//     window.location.reload(); 
-//   }    });
-//   }
 });
 
 //home page image slider
