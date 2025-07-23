@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khana Diaries - Chicken Sizzler</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- header -->
+     <header>
+            <div class="nav-top">
+            <div id="logo-content">
+            <a href="../index.html#home" id="logo">
+            <img src="../images/logo.png" alt="khana diaries logo">
+            <h1 id="khana" style="color: #D63829;">Khana </h1>
+            <h1 id="diaries" style="color: #E6A700;"> Diaries</h1>
+            </a>
+        </div>
+        <div class="hamburger">&#9776;</div>
+        </div>
+
+        <nav>
+            <!-- navlinks -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./allRecipes.html" class="active">All Recipes</a></li>
+                <li><a href="./share-now.html">Share Recipes</a></li>
+                <li><a href="./about.html">AboutUs</a></li>
+            </ul>
+
+            <!-- search -->
+             <div class="search-container">
+             <input type="text" id="search" name="search" placeholder="Search Recipes">
+             <span id="clearSearch">&times;</span>
+             </div>
+
+             <!-- login button -->
+              <a href="./login.html" class="login-btn">Login</a>
+              <button id="logoutBtn" style="display:none;">Logout</button>
+        </nav>
+
+     </header>
+
+     
+     <!-- links -->
+     <section id="recipe-nav-links">
+        <div class="links">
+            <ul>
+                <li><a href="./allRecipes.html">All Recipes</a></li> &raquo;
+                <li><a href="./allRecipes.html?category=maindish" class="filter-btn" data-category="maindish">Main Dish</a></li> &raquo;
+                <li><a href="./sizzler.html">Chicken Sizzler</a></li>
+            </ul>
+        </div>
+     </section>
+
+<!-- title -->
+<div class="recipeTitle">
+    <h1>Chicken Sizzler</h1>
+    <div class="date">
+    <time datetime="2025-07-23" class="posted-date">July 27c, 2025</time>
+ </div>
+</div>
+
+<!-- chicken image -->
+ <div class="dish-image">
+    <img src="../images/sizzler.jpg" alt="chicken" id="main-image">
+ </div>
+
+  <div class="image-gallery">
+    <!-- original chicken -->
+     <img src="../images/sizzler.jpg" alt="original chicken" class="gallery" onclick="changeImage(this)">
+
+     <!-- other chicken -->
+      <img src="../images/sizzler.jpg" alt="momo2" class="gallery" onclick="changeImage(this)">
+ </div>
+
+
+ <!-- description -->
+ <div class="description">
+    <p>A Nepali-style sizzler is an Indo-Nepali fusion dish that combines sizzling hot iron-plate serving with local flavors — spiced grilled chicken (similar to Sekuwa or tandoori), stir-fried veggies with Nepali masala, fried rice, and a tangy-spicy sauce. It’s the perfect showstopper for a cozy gathering at home!</p>
+    <div class="line"></div> 
+</div>
+
+ <!-- prep and cook time -->
+  <div class="timing">
+    <div class="prep-time">
+        <h5><img src="../images/timer.svg" alt="Timer icon" class="timer-icon">Prep Time</h5>
+        <p>30 - 40 mins</p>
+    </div>
+
+    <div class="small-line"></div>
+
+    <div class="border"></div>
+    <div class="cook-time">
+        <h5><img src="../images/cook.svg" alt="Cook icon" class="timer-icon">Cook Time</h5>
+        <p>30 - 40 mins</p>
+    </div>
+  </div>
+
+
+  <div class="recipe-container">
+  <!-- ingredients -->
+   <div class="ingredients">
+    <h2><img src="../images/ing-img.svg" alt="ingredients icon" class="ing-icon">Ingredients: </h2>
+    <ul>
+        <li>2 boneless chicken breasts or thighs</li>
+        <li>1 tbsp ginger-garlic paste</li>
+        <li>1 tbsp ground cumin (jeera powder)</li>
+        <li>1 tbsp coriander powder (dhaniya powder)</li>
+        <li>½ tsp turmeric powder</li>
+        <li>1 tsp red chili powder </li>
+        <li>1 teaspoon turmeric powder</li>
+        <li>1 tbsp lemon juice</li>
+        <li>1 teaspoon cumin powder</li>
+        <li>2 tbsp yogurt/curd</li>
+        <li>1 tbsp mustard oil</li>
+
+    </ul>
+   </div> 
+
+
+    <!-- instructions -->
+   <div class="instructions">
+    <h2> <img src="../images/inst-img.svg" alt="instruction icon" class="ins-icon">Instructions: </h2>
+    <ol>
+        <li>In a bowl, mix chicken with yogurt, ginger-garlic paste, cumin, coriander, turmeric, chili powder, mustard oil, lemon juice, and salt.</li>
+        <li>Let it marinate for at least 30 minutes (1–2 hours for best flavor).</li>
+        <li>Heat a grill pan or tawa on medium-high heat.</li>
+        <li>Add onions and cook until soft and lightly golden.</li>
+        <li>Grill the chicken pieces until cooked through and slightly charred — about 6–8 mins per side.</li>
+        <li>Heat butter/oil in a small pan.</li>
+        <li>Add flour and roast for 1–2 mins.</li>
+        <li>Gradually add chicken stock while stirring to avoid lumps.</li>
+        <li>Add ketchup, soy sauce, chili sauce, Timur powder, and salt.</li>
+        <li>Simmer for 3–5 minutes until thick. Keep warm.</li>
+
+        <li>Heat oil in a wok or large pan.</li>
+        <li>Add carrot, beans, cauliflower, cabbage, and capsicum.
+</li>
+<li>Add garlic, ginger, and sliced onion — sauté until fragrant.
+</li>
+<li>Add green chili (optional).
+</li>
+<li>Stir-fry on high flame for 3–4 mins — keep it slightly crunchy.
+</li>
+<li>Add salt, Timur or black pepper, and a splash of soy sauce if you like.
+</li>
+<li>Toss and remove from heat.
+</li>
+<li>Heat the sizzler plate directly on a gas flame until smoking hot.</li>
+<li>Place the hot plate carefully on the wooden base using tongs.
+</li>
+<li>Line with cabbage leaves.
+</li>
+<li>Arrange fried rice on one side, veggies on the other, and grilled chicken in the middle.
+</li>
+<li>Pour the hot sauce over the chicken and veggies.
+</li>
+<li>Add a small cube of butter or ghee to the plate for extra sizzle.
+</li>
+
+    </ol> 
+
+   </div>
+   </div>
+
+
+
+
+
+
+   <!-- tips -->
+   <div class="tips">
+    <h3><img src="../images/light-bulb.png" alt="tips" class="tips-icon">Pro Tips</h3>
+    <ul>
+    <li>You can add a bit of timur (Nepali Szechuan pepper) to make it even move flavorful.</li>
+    <li>Let the curry rest for 5 minutes before serving as the flavor becomes deeper.</li>
+  </ul>
+   </div>
+
+   <div class="happy-cooking">Happy Cooking!</div>
+
+   <section id="you-might-like">
+    <h2><img src="../images/star-icon.svg" class="star-icon" alt="star-icon">You might like</h2>
+    <div class="allRecipeContainer">
+
+         <div id="chhoila" class="allRecipeCard" data-category="snacks">
+                <img src="../images/buff-chhoila.jpg" alt="chhoila">
+                <div class="content">
+                <h3>Buff Chhoila</h3>
+                <p>Buff Chhoila is a spicy and smoky Newari dish made from grilled or fried buffalo meat, marinated in mustard oil, garlic, ginger, and traditional Nepali spices. </p>
+                <a href="./chhoila.html">Explore Recipe</a> 
+                </div>
+            </div>
+
+             <div id="dalbhat" class="allRecipeCard" data-category="maindish">
+            <img src="../images/dal-bhat.jpg" alt="bhat">
+                <div class="content">
+                <h3>Dal Bhat</h3>
+                <p>Dal Bhat is one of the staple food in Nepal which is cooked daily in every household.It is steamed and served with side dishes and pickles.</p>
+                <a href="./dalbhat.html">Explore Recipe</a> 
+                </div>
+        </div>
+
+             <div id="dhindo" class="allRecipeCard" data-category="maindish">
+                <img src="../images/dhindo.jpg" alt="dhindo">
+                <div class="content">
+                <h3>Dhindo</h3>
+                <p>Dhindo is a traditional Nepali staple made by gradually stirring millet or buckwheat flour into boiling water, creating a thick, dough-like consistency.</p>
+                <a href="./dhindo.html">Explore Recipe</a> 
+                </div>
+            </div>
+</div>
+   </section>
+
+
+   <!-- footer -->
+     <footer>
+
+        <section class="footer-content">
+        <div class="about-khana">
+            <h1>Khana Diaries</h1>
+            <p>Our website ensures that you <span>will <br></span>  get the best recipe to cook  <span>for <br></span> yourself and your loved ones.</p>
+        </div>
+
+        <!-- links -->
+        <div class="quick-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="allRecipes.html#allRecipes">All Recipes</a></li>
+                <li><a href="./share-now.html">Share Recipes</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+
+        <!-- images -->
+         <div class="footer-image">
+            <img src="../images/selroti.jpg" id="sel" alt="">
+            <img src="../images/dhindo.jpg" id="dhindo" alt="">
+            <img src="../images/dal-bhat.jpg" id="bhat" alt="">
+            <img src="../images/MOMO.jpg" id="momo" alt="">
+         </div>
+
+         </section>
+
+
+         <!-- copyright -->
+          <div class="copyright">
+            Copyright &copy; 2025 Khana Diaries. All Rights Reserved
+          </div>
+     </footer>
+ 
+    <script src="../script/search.js"></script>
+    <script src="../script/hamburger-menu.js"></script>
+    <script src="../script/main.js"></script>
+    <script src="../script/login.js"></script>
+    <script>
+        function changeImage(gallery){
+            const mainImage = document.getElementById("main-image");
+            mainImage.src = gallery.src;
+
+            const allImages = document.querySelectorAll(".image-gallery .gallery");
+            allImages.forEach(img => {
+                img.classList.remove("active-gallery");
+            });
+
+            gallery.classList.add("active-gallery");
+            console.log("Image changed successfully");
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

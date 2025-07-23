@@ -1626,6 +1626,7 @@ cursor: pointer;
         display: flex;
         justify-content: center;
         padding: 5% 12%;
+        background-color: #A42A2A;
     }
 
     .login-container{
